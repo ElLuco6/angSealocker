@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sealocker</title>
+
+    <!-- <link rel="stylesheet" type="text/css" href="./assets/styles/style.css"> -->
+
+    <link rel="stylesheet"
+        href="https://maxst.icons8.com/vue-static/landings/line-awesome/font-awesome-line-awesome/css/all.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
+    <link rel="stylesheet"
+        href="https://maxst.icons8.com/vue-static/landings/line-awesome/line-awesome/1.3.0/css/line-awesome.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<!--     <script type="module" language="JavaScript" type="application/javascript" src="scripts/index.js"></script>
+ -->    <!-- <script type="text/javascript" src="scripts/index.js"></script> -->
+</head>
+<body>
+    <main class="d-flex">
+
+        <!--NAVBAR -->
+        <nav class="fixed-left" id="home_navbar">
+            <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" id="home_nav_row" fill="currentColor"
+                class=" bi bi-arrow-left-right d-flex fs-1 	d-block d-sm-none" viewBox="0 0 16 16">
+                <path fill-rule="evenodd"
+                    d="M1 11.5a.5.5 0 0 0 .5.5h11.793l-3.147 3.146a.5.5 0 0 0 .708.708l4-4a.5.5 0 0 0 0-.708l-4-4a.5.5 0 0 0-.708.708L13.293 11H1.5a.5.5 0 0 0-.5.5zm14-7a.5.5 0 0 1-.5.5H2.707l3.147 3.146a.5.5 0 1 1-.708.708l-4-4a.5.5 0 0 1 0-.708l4-4a.5.5 0 1 1 .708.708L2.707 4H14.5a.5.5 0 0 1 .5.5z" />
+            </svg>
+            <a class="nav-link active" aria-current="page" href="#"><img src="assets/img/LOGO_sans_hallo.png"
+                    alt="logo"></a>
+            <a class="nav-link" href="#"><img src="assets/img/3.png" alt="tuto app1"></a>
+            <a class="nav-link" href="#"><img src="assets/img/photo.png" alt="tuto app2"></a>
+            <a class="nav-link disabled"><img src="assets/img/maplogo.png" alt="tuto app3"></a>
+        </nav>
+
+        <section id="home_brand_info " class="text-center ms-5 container-fluid overflow-auto">
+
+           
+            <!--BRAND INFO -->
+            <div class="d-flex justify-content-center">
+                <div>
+                    <img src="assets/img/images.png" alt="brand_logo" id="home_brand_logo" class="mt-4">
+
+                    <h1 class="d-flex flex-column  justify-content-center" id="home_title"><span class="Caveat">THEY
+                            ARE</span><span class="fw-bold ">WYVE</span></h1>
+                </div>
+                <div class="d-flex flex-column-reverse">
+                    <p class=" orange fw-bold" id="brand_location"><img id="pointeur" src="assets/img/pointeur(1).png" alt="pointeur">
+                        ANGLET</p>
+                </div>
+
+            </div>
+            <h2 class="board_details_h2 fs-4 mb-0 text-uppercase fw-bold">Jeunes startup du pays baques, shapers
+                innovants et
+                uniques</h2>
+            <h3 class="gris Caveat mb-0">Board éco responsable en impression 3D</h3>
+
+
+            <!--BOARD SECTION-->
+            <div class="container-fluid   d-flex flex-row justify-content-around " id="home_board_section">
+                <div class="row " id="home_display_boards" >
+                    <!--Board dynamique-->
+                  
+                </div>
+            </div>
+        </section>
+        
+    </main>
+
+    <footer class="fixed-bottom" id="home_footer">
+        <section id="footerSection3" class="rounded-top text-center ">
+
+            <div id="footer_block" class="justify-content-between">
+
+                <div class="d-flex flex-column">
+                    <p class="fst-italic fs-1 text-start mb-0 text-uppercase Caveat board_details_h2">Telecharge l'app</p>
+                    <p class="text-nowrap text-start"> <span class="fs-1 ms-2  fw-bold me-3 text-nowrap text-white">SEALOCKER</span><span
+                            id="SEALOCKER" class=" fs-2 text-uppercase orange">pour testé une planche</span></p>
+                </div>
+
+                <div id="app3" class="d-flex me-5 mt-3 justify-content-around flex-lg-column">
+
+                    <img src="https://popup-sealocker.herokuapp.com/assets/imgs/app-store-apple.png"
+                        class="img-fluid p-2 border mb-3 border-3 rounded bg-dark" alt="apple-logo">
+                    <img src="https://popup-sealocker.herokuapp.com/assets/imgs/app-store-google.png"
+                        class="img-fluid  p-2 border mb-3 border-3 rounded bg-dark" alt="google-logo">
+                </div>
+            </div>
+        </section>
+    </footer>
+</body>
+
+</html>

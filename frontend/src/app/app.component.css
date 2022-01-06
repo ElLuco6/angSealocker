@@ -1,0 +1,545 @@
+ @font-face {
+    font-family: Spartan;
+    src: url("../assets/fonts/Spartan-VariableFont_wght.ttf");  
+    
+}
+  @font-face {
+    font-family: Now;
+    src: url("../assets/fonts/NowAlt-Regular.otf");
+}
+  @font-face {
+    font-family: Caveat;
+    src: url("../assets/fonts/static/Caveat-Regular.ttf");
+}
+  @font-face {
+    font-family: Adigana;
+    src: url("../assets/fonts/AdigianaUI.ttf");
+}
+  @font-face {   
+    font-family: Poppins;
+    src: url("../assets/fonts/static/Poppins-Regular.ttf");
+}
+    @font-face { 
+    font-family: Inter;
+    src: url("../assets/fonts/static/Inter-Regular.ttf") format('ttf');
+} 
+body{
+    background-color: #ffffde;
+}
+.main_index{
+    margin-bottom: 150px;
+}
+#title{
+    display: flex;
+    flex-direction: column;
+    font-size: 2rem;
+    color: #02345b;
+    font-family: 'Caveat', sans-serif;
+}
+
+#brand_description{
+    font-size: 1rem;
+    color: #02345b;
+   
+}
+h1{
+    font-family: 'Spartan', sans-serif ;
+    color: #02345b
+}
+h2{
+    font-family: 'Now', sans-serif;
+}
+h3{
+    font-family: 'Inter', sans-serif;
+    color: #03335b;
+}
+
+.hide_text{
+    display: none;
+  }
+
+.Caveat{
+    font-family: 'Caveat', sans-serif ;
+}
+.orange{
+    color: #f18f3a;
+}
+
+.gris{
+    color: #c7d5d6;
+}
+  #brand_name{
+    font-family: 'Spartan', sans-serif !important;
+    
+    
+}
+#brand_logo{
+    height: 10vh;
+    object-fit: contain;
+    
+}
+#main_container{
+    margin-left: 10%;
+    margin-right: 10%;
+}
+
+#footerSection {
+    background-color: #13616d;
+    padding: 1rem;
+    display: flex;
+    justify-content: space-between;
+    height: 5%;
+    align-items: center;
+
+}
+#footerSection2 {
+    text-align: center;
+    background-color: #13616d;
+    padding: 1rem;
+    
+
+}
+
+#footerSection img {
+    width: 30%;
+    display: inline;
+
+}
+
+#footerSection p {
+    font-size: 25px;
+    color: #02345b;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+
+}
+#footerSection2 p {
+    font-size: 25px;
+    color: #EFEFEF;
+   
+    align-items: center;
+
+}
+#row_img{
+    width: 80%;
+}
+.art_board_top{
+    display :flex;
+    flex-direction: column;
+  }
+  #footer {
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+  }
+  
+  body {
+    margin-bottom: 800px;
+  }
+  .voir_p{
+  
+
+    background-color: #EFEFEF;
+    margin-bottom: 0px;
+   border:  solid 20px #b8e9ef;
+   border-bottom: solid 2px;
+   border-top: 2px solid;
+   border-color: #b8e9ef;
+   font-family: Poppins,sans-serif;
+   padding-top: 1px;
+   padding-bottom: 1px; 
+  }
+  
+  .voir_div{
+    display: flex;
+    
+  justify-content: center;
+}
+.art_board_bot{
+    display: flex;
+    justify-content: space-around;
+}
+.card-body{
+    display: flex;
+    justify-content: space-between;
+}
+#board_grid{
+    
+    justify-content: center;
+}
+.price_art{
+    display: flex;
+}
+.ligne{
+    color: #02345b;
+    background-color: #13616d;
+    border-color: #02345b;
+    height: 8px;
+    margin-bottom: 0px;
+    border-radius: 50px;
+}
+.data_image{
+    height: 20vh;
+    
+}
+
+#quiver {
+    text-transform: uppercase;
+    color: #f18f3a;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 20px;
+  }
+  #SEALOCKER {
+    font-size: 25px;
+    flex-basis: 100%;
+  }
+  #app {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: flex-end;
+    gap: 15px;
+  
+  }
+  #app2 {
+    display: flex;
+   
+   
+    gap: 15px;
+  
+  }
+
+  .Sealocker_logo{
+      height: 15vh;
+      margin-top: -20px;
+     margin-bottom: -20px;
+  }
+  .brand_img{
+      height: 15vh;
+      border-radius: 10%;
+      object-fit: contain;
+  } 
+  #brand_logo{
+    width: 170px;
+}
+.card-img-top{
+    
+    
+    object-fit: contain;
+  }
+
+  #footerSection2 img {
+    width: 15vh;
+    
+
+}
+#Sealocker_button{
+    width: 200px;
+    height: 80px;
+    box-shadow: inset 0 0 0 0 #02345b;
+    transition: ease-out 0.3s;
+    outline: none;
+    background-color: #13616d;
+    color:white;
+    text-decoration: none;
+    padding:15px;
+    position:fixed;
+right:0.5%;
+bottom:0.5%;
+border-radius: 20px ;
+    }
+    #Sealocker_button:hover{
+box-shadow: inset 200px 0 0 0 #02345b;
+cursor: pointer;
+color:#f18f3a;
+}
+
+/* BOARD DETAILS CSS */
+
+.board_details_p{
+    color: #13616d;
+}
+.board_details_h2{
+    color: #02345b;
+} 
+
+#board_details_btn{
+    background-color: #13616d;
+    font-size: 2em;
+}
+#board_details_brand_logo{
+    height: 200px;
+}
+
+
+/* BOOKING */
+
+#booking_board_img{
+    height: 250px;
+   object-fit: cover;
+    background-color: lightgray;
+    border-radius: 10px;
+
+}
+
+#booking_btn1{
+    
+    border : solid 5px #f18f3a;
+    border-radius: 5px;
+}
+.board_details_hour{
+    background-color: #f18f3a;
+    border-radius: 10px;
+}
+
+td{
+    color: #13616d;
+    background-color: white;
+}
+.bg_vert{
+    color:#EFEFEF;
+    background-color: #13616d;
+    
+}
+/* Confirm Booking */
+
+
+#coordoné_section input{
+    border: #c7d5d6 5px solid;
+    border-radius: 5px;
+    margin: 15px;
+}
+#coordoné_section{
+    margin-left: 20%;
+    margin-right: 20%;
+}
+
+
+
+/* New Home page */
+#home_navbar{
+    height: 80vh;
+}
+#home_navbar img {
+    margin: 0px;
+    height: 20vh;
+}
+.nav-link{
+    padding: 0px !important;
+    background-color: #13616d;
+}
+#home_board_section{
+ height: 30vh;
+}
+#home_footer{
+    height: 20vh;
+    margin-bottom: 0px;
+}
+#pointeur{
+    height: 50px;
+}
+#footerSection3{
+    background-color: #c7d5d6;
+    height: 20vh;
+}
+#app3 img{
+    height: 7vh;
+    border-radius: 50px;
+}
+#home_brand_logo{
+    height: 80px;
+}
+#home_title{
+    font-size: 65px;
+}
+.home_card{
+    
+    margin-bottom: 0px;
+}
+.home_card img{
+    height: 20vh;
+    
+}
+#home_nav_row{
+    color :white;
+   
+   /*  display: none; */
+    background-color: #13616d;
+}
+#home_navbar{
+    background-color: #13616d;
+}
+#footer_block{
+ display: flex;       
+}
+
+/* MEDIA QUERRY */
+
+
+
+
+
+
+/* Tablette*/
+@media screen and (max-width: 1100px) {
+    #footerSection2 p {
+        font-size: 17px;
+    }
+    .data_image{
+        height: 30vh;
+    }
+
+    #quiver,
+    #SEALOCKER,
+    #footerSection img {
+        width: 60%;
+    }
+    #app {
+        flex-direction: column;
+    
+      }
+
+    #title{
+        font-size: 2.5rem;
+       
+    }
+    #brand_description{
+        font-size: 1rem;
+    } 
+    #brand_logo{
+        width: 130px;
+    }
+    #board_details_brand_logo{
+        height: 150px;
+    }
+    #booking_board_img{
+        height: 200px;
+       
+    }
+    #footer_block{
+        display: block;   
+       
+       }
+       #footer_block img{
+           width: 200px;
+       }
+   
+     
+}
+
+/* fix footer text */
+
+@media screen and (max-width: 702px) {
+
+    #quiver,
+    #SEALOCKER,
+    #footerSection p {
+        font-size: 13px;
+    }
+
+    #footerSection img {
+        width: 50%;
+
+    }
+   
+    #title{
+        font-size: 2rem;
+    }
+     #app2 {
+         display: flex;
+        
+      }
+      #main_container{
+        margin-left: 0;
+        margin-right: 0;
+    }
+
+    #board_details_brand_logo{
+        height: 120px;
+    }
+    
+   
+}
+
+/*Ajuste main img*/
+@media screen and (max-width: 602px) {
+
+    #quiver,
+    #SEALOCKER,
+    #footerSection2 p {
+        font-size: 20px;
+    }
+
+    #footerSection2 img {
+        width: 30%;
+
+    }
+
+    #footerSection {
+        display: block;
+
+    }
+
+    #app {
+        flex-direction: row;
+      }
+    
+      #title{
+        font-size: 1.5rem;
+    }
+    #brand_description{
+        font-size: 1rem;
+    } 
+    #brand_logo{
+        width: 100px;
+    }
+    #board_details_brand_logo{
+        height: 100px;
+    }
+    /* #home_nav_row{
+        display: none;
+    } */
+    #home_navbar a{
+        display: none;
+    }
+    #footer_block img{
+        width: 150px;
+    }
+
+}
+
+/*PHONE*/
+@media screen and (max-width: 480px) {
+
+    #quiver,
+    #SEALOCKER,
+    #footerSection2 p {
+        font-size: 16px !important;
+    }
+
+    #footerSection img {
+        width: 50%;
+
+    }
+    #footerSection2 img {
+        width: 30%;
+
+    }
+    #title{
+        font-size: 1rem;
+        align-items: center;
+    }
+    #brand_description{
+        font-size: 0.5rem;
+    }
+    #board_grid{
+       justify-content: right;
+    } 
+    #brand_logo{
+        width: 80px;
+    }
+    #board_details_brand_logo{
+        height: 80px;
+    }
+}
