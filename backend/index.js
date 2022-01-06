@@ -1,7 +1,7 @@
 const express = require("express");
 const router = express.Router();
 // const boutondCtrl = require('./controller/BoutonController');
-const partnerCtrl = require('./public/scripts/partner');
+const partnerCtrl = require('../frontend/src/scripts/partner');
 const app = express();
 
 // const setup = require('./public/scripts/setup.js');
@@ -28,7 +28,7 @@ const app = express();
   
  router.get('/:partnerId', async (req, res, next) => {
 	 data = await partnerCtrl.getPartner(req.params.partnerId);
-	 //console.log(data);
+	 console.log(data);
 	// partnerCtrl.displayLogo(data);
 	 /* res.render('head.ejs', {
 		data : data

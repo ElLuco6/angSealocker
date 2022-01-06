@@ -23,9 +23,7 @@
     font-family: Inter;
     src: url("../assets/fonts/static/Inter-Regular.ttf") format('ttf');
 } 
-body{
-    background-color: #ffffde;
-}
+
 .main_index{
     margin-bottom: 150px;
 }
