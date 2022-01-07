@@ -33,7 +33,7 @@ exports.displayLogo =  (data) =>{
                 fs.writeFile("results.json", JSON.stringify(data))
             }) */
                 //Nouveau display partner 
-               $('#home_brand_info').append('<div class="d-flex justify-content-center">' +
+               /* $('#home_brand_info').append('<div class="d-flex justify-content-center">' +
               ' <div>'+
                   ' <img src="'+ data.partner.logo +'" alt="brand_logo" id="home_brand_logo" class="mt-4">'
 
@@ -44,7 +44,7 @@ exports.displayLogo =  (data) =>{
               ' </div>'+
 
           ' </div>'+'<h2 class="board_details_h2 fs-4 mb-0 text-uppercase fw-bold">'+data.partner.bio +'</h2>'+
-      '<h3 class="gris Caveat mb-0">Board éco responsable en impression 3D</h3>') 
+      '<h3 class="gris Caveat mb-0">Board éco responsable en impression 3D</h3>')  */
           
 }
 

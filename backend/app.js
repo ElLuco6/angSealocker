@@ -3,7 +3,18 @@ const express = require('express');
 const app = express();
 const path = require('path');
 
-const indexRoute = require('./app/index.js')
+
+
+const mongoose = require('mongoose');
+//const bodyParser = require('body-parser');
+
+
+//const partnaireRoutes = require('./routes/partnaire');
+const boardRoutes = require('./routes/board');
+
+
+
+const indexRoute = require('./index.js')
 
 
 app.use((req, res, next) => {
@@ -13,11 +24,14 @@ app.use((req, res, next) => {
     next();
   });
 
-app.use('/', express.static(path.join(__dirname, 'app', 'public')));
+  
+
+//app.use('/', express.static(path.join(__dirname, 'app', 'public')));
 
 
 //Route
 app.use( "/", indexRoute);
-
+//app.use( "/partnaire", partnaireRoutes);
+app.use( "/board", boardRoutes);
 
 module.exports = app;

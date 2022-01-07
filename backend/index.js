@@ -29,7 +29,7 @@ const app = express();
  router.get('/:partnerId', async (req, res, next) => {
 	 data = await partnerCtrl.getPartner(req.params.partnerId);
 	 console.log(data);
-	// partnerCtrl.displayLogo(data);
+	 //partnerCtrl.displayLogo(data);
 	 /* res.render('head.ejs', {
 		data : data
 		
@@ -37,7 +37,9 @@ const app = express();
 	 /*  test = "2"
 	  var data = {studentList: ["Johnson", "Mary", "Peter", "Chin-su"]};
 	  res.render('coracle-beach', {students: data}); */
-	 res.sendFile('new_home_page.html', { root: __dirname });
+
+	  
+	// res.sendFile('new_home_page.html', { root: __dirname });
 
 	// var html = fs.readFileSync(__dirname + 'index.html' + partnerId, 'utf8');
 	
@@ -56,9 +58,7 @@ const app = express();
 });
  
 
-app.get('/test', function(req, res) {
-	res.render('head.ejs');
-  });
+
 
 module.exports = router;
 
