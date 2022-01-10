@@ -26,7 +26,7 @@ const app = express();
  
   app.set('view engine', 'ejs');
   
- router.get('/:partnerId', async (req, res, next) => {
+/*  router.get('/:partnerId', async (req, res, next) => {
 	 data = await partnerCtrl.getPartner(req.params.partnerId);
 	 console.log(data);
 	 //partnerCtrl.displayLogo(data);
@@ -55,7 +55,7 @@ const app = express();
 // 	partnerCtrl.displayLogo(data) ; 
 //  res.send(data.partner);
 // console.log(partnerCtrl.displayLogo(data))
-});
+//}); */
  
 
 

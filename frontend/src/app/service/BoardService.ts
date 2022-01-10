@@ -41,10 +41,10 @@ export class BoardService {
 getAllBoard() {
   this.httpClient
   
-    .get<any[]>('http://localhost:3000/60bf56b2ed1e480004a7a110')
+    .get<any[]>('https://sea-locker-backend-dev.herokuapp.com/api/v1/partner/60bf56b2ed1e480004a7a110')
     .subscribe(
       (response) => {
-        console.log(this);
+        console.log(response);
         this.boards = response;
         this.emitBoards();
       },
