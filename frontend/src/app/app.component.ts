@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import {Board } from './model/Board.model';
+//import {Board } from './model/Board.model';
 import { Subject } from 'rxjs';
 import { HttpClientModule } from '@angular/common/http';
 //import { data} from '../../../backend/index.js';
@@ -15,8 +15,8 @@ import { HttpClient } from '@angular/common/http';
 
 export class AppComponent implements OnInit {
   title = 'angSealocker';
-  public boards: Board[] = [];
-  public boardSubject = new Subject<Board[]>();
+  public Boards : any
+  //public boardSubject = new Subject<Board[]>();
  
  
 
@@ -27,16 +27,16 @@ export class AppComponent implements OnInit {
      
   } 
 
-  emitBoards() {
-    this.boardSubject.next(this.boards.slice());
-  }
+  /* emitBoards() {
+    this.boardSubject.next(this.Boards.slice());
+  } */
 
 ngOnInit(){
 
   
     
     this.getAllBoard();
-    console.log(Board);
+    
 }
 getAllBoard() {
   this.httpClient
@@ -46,8 +46,8 @@ getAllBoard() {
     .subscribe(
       (response) => {
         console.log(response);
-        this.boards = response;
-        
+        this.Boards = response;
+        //console.log(Boards);
       },
       (error) => {
         console.log('Erreur ! : ' + error);
