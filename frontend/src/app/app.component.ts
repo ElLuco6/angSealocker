@@ -1,21 +1,26 @@
 import { Component, OnInit } from '@angular/core';
+import * as $ from 'jquery';
 //import {Board } from './model/Board.model';
 import { Subject } from 'rxjs';
 import { HttpClientModule } from '@angular/common/http';
 //import { data} from '../../../backend/index.js';
 import { BoardService } from './service/BoardService';
 import { HttpClient } from '@angular/common/http';
+import { ready } from 'jquery';
+
 
 
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
-  styleUrls: ['./app.component.css']
+  styleUrls: ['./app.component.css'],
+  
 })
 
 export class AppComponent implements OnInit {
   title = 'angSealocker';
-  public Boards : any
+  public data : any;
+  
   //public boardSubject = new Subject<Board[]>();
  
  
@@ -34,10 +39,30 @@ export class AppComponent implements OnInit {
 ngOnInit(){
 
   
-    
+  
     this.getAllBoard();
+   
+    $(document).on('mouseleave', ".art_board", function () {
+      $(this).find(".voir_div").slideToggle();
+      $(this).find(".price").toggle(500,"swing");
+      
+      
+    });
+  
+    $(document).on('mouseenter', ".art_board ", function () {
+  
+      $(this).find(".voir_div").slideToggle();
+      $(this).find(".price").toggle(500,"swing");
+    });
+    $( window ).on( "load", function() {
+      $(".voir_div").hide();
+    })
+    
     
 }
+
+
+
 getAllBoard() {
   this.httpClient
   
@@ -46,8 +71,8 @@ getAllBoard() {
     .subscribe(
       (response) => {
         console.log(response);
-        this.Boards = response;
-        //console.log(Boards);
+        this.data = response;
+        //console.log(this.Boards);
       },
       (error) => {
         console.log('Erreur ! : ' + error);

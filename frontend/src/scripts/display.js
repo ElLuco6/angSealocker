@@ -15,7 +15,8 @@ export function getBoards() {
 
 
                 //Loop articles
-                /* $('#board_grid').append('<article class="card col-12 mb-5 col-xs-12 mx-2 col-sm-7 col-md-6 col-lg-3 art_board" >' + '<div class="art_board_top position-relative">' + '<img  width="100%" class="card-img-top data_image" id="" src="' + res.boards[i].images[0] + '" />' + '<div id="article-' + i + '" class="voir_div  ">' + '<p class="voir_p  px-1 position-absolute bottom-0  text-center ">' + "quick look" + '</p>' + '</div>' + '</div> ' + '<div class="card-body .art_board_bot">' + '<div>' + '<p class="card-text name_art fw-bold popup_article_p">' + res.boards[i].brand + '</p>' + '<p class="shape card-text categorie_art fst-italic popup_article_p data_model">' + res.boards[i].shape + '</p>' + '</div>' + '<div>' + '<h3 class="price  price_art fst-italic popup_article_p">' + res.boards[i].rental_price + '€/h' + '</h3>' + '</div>' +  '</div>' + '</article>');
+                /* $('#board_grid').append('<article class="card col-12 mb-5 col-xs-12 mx-2 col-sm-7 col-md-6 col-lg-3 art_board" >'
+                 + '<div class="art_board_top position-relative">' + '<img  width="100%" class="card-img-top data_image" id="" src="' + res.boards[i].images[0] + '" />' + '<div id="article-' + i + '" class="voir_div  ">' + '<p class="voir_p  px-1 position-absolute bottom-0  text-center ">' + "quick look" + '</p>' + '</div>' + '</div> ' + '<div class="card-body .art_board_bot">' + '<div>' + '<p class="card-text name_art fw-bold popup_article_p">' + res.boards[i].brand + '</p>' + '<p class="shape card-text categorie_art fst-italic popup_article_p data_model">' + res.boards[i].shape + '</p>' + '</div>' + '<div>' + '<h3 class="price  price_art fst-italic popup_article_p">' + res.boards[i].rental_price + '€/h' + '</h3>' + '</div>' +  '</div>' + '</article>');
                 
                 $(".voir_p").hide(); */
 
