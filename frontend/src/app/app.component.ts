@@ -39,7 +39,7 @@ export class AppComponent implements OnInit {
 ngOnInit(){
 
   
-  
+    
     this.getAllBoard();
    
     $(document).on('mouseleave', ".art_board", function () {
@@ -54,9 +54,10 @@ ngOnInit(){
       $(this).find(".voir_div").slideToggle();
       $(this).find(".price").toggle(500,"swing");
     });
-    $( window ).on( "load", function() {
-      $(".voir_div").hide();
-    })
+    window.onload = function() {
+     
+      console.log('yo')
+    }
     
     
 }
