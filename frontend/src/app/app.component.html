@@ -2,7 +2,7 @@
   <main class="d-flex">
 
     <!--NAVBAR -->
-    <nav class="fixed-left" id="home_navbar">
+    <nav class="fixed-left " id="home_navbar">
       <!-- Flèche nav pour mobile -->
       <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" id="home_nav_row" fill="currentColor"
         class=" bi bi-arrow-left-right d-flex fs-1 	d-block d-sm-none" viewBox="0 0 16 16">
@@ -10,7 +10,7 @@
           d="M1 11.5a.5.5 0 0 0 .5.5h11.793l-3.147 3.146a.5.5 0 0 0 .708.708l4-4a.5.5 0 0 0 0-.708l-4-4a.5.5 0 0 0-.708.708L13.293 11H1.5a.5.5 0 0 0-.5.5zm14-7a.5.5 0 0 1-.5.5H2.707l3.147 3.146a.5.5 0 1 1-.708.708l-4-4a.5.5 0 0 1 0-.708l4-4a.5.5 0 1 1 .708.708L2.707 4H14.5a.5.5 0 0 1 .5.5z" />
       </svg>
       <a class="nav-link active" aria-current="page" href="#"><img src="assets/img/LOGO_sans_hallo.png" alt="logo"></a>
-      <a class="nav-link" href="#"><img src="assets/img/3.png" alt="tuto app1"></a>
+      <a  class="nav-link" href="#"><img src="assets/img/3.png" alt="tuto app1"></a>
       <a class="nav-link" href="#"><img src="assets/img/photo.png" alt="tuto app2"></a>
       <a class="nav-link disabled"><img src="assets/img/maplogo.png" alt="tuto app3"></a>
     </nav>
@@ -47,7 +47,7 @@
 
 
       <!--BOARD SECTION-->
-      <div  *ngIf="data != undefined" class="container-fluid   d-flex flex-row justify-content-around " id="home_board_section">
+      <div  *ngIf="data != undefined" class="container-fluid   d-flex flex-row justify-content-around mt-5" id="home_board_section">
         <div class="row " id="home_display_boards">
           <!--Board dynamique-->
           <ng-container *ngFor="let board of data.boards">

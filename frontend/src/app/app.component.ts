@@ -7,6 +7,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { BoardService } from './service/BoardService';
 import { HttpClient } from '@angular/common/http';
 import { ready } from 'jquery';
+import { ActivatedRoute } from '@angular/router'
 
 
 
@@ -28,7 +29,8 @@ export class AppComponent implements OnInit {
   //data = data;
 
 
-   constructor( private httpClient: HttpClient) { 
+   constructor( private route: ActivatedRoute,
+    private httpClient: HttpClient) { 
      
   } 
 
@@ -38,13 +40,22 @@ export class AppComponent implements OnInit {
 
 ngOnInit(){
 
+const partnerId = this.route.snapshot.params['id'];
+console.log(partnerId);
+//this.data = this.getPartnerById(partnerId);
   
     
     this.getAllBoard();
    
+
+    $(document).on('click', '#home_navbar', function(){
+      console.log('y');
+      $(this).find(".nav-link").toggle(500,"swing");
+    });
+
     $(document).on('mouseleave', ".art_board", function () {
       $(this).find(".voir_div").slideToggle();
-      $(this).find(".price").toggle(500,"swing");
+      /* $(this).find(".price").toggle(500,"swing"); */
       
       
     });
@@ -52,7 +63,7 @@ ngOnInit(){
     $(document).on('mouseenter', ".art_board ", function () {
   
       $(this).find(".voir_div").slideToggle();
-      $(this).find(".price").toggle(500,"swing");
+     /*  $(this).find(".price").toggle(500,"swing"); */
     });
     window.onload = function() {
      
@@ -61,13 +72,20 @@ ngOnInit(){
     
     
 }
-
+/* getPartnerById(partnerId: number): void {
+  const dats = this.data.find(data => data.id === id);
+  if (data) {
+      data.snaps++;
+  } else {
+      throw new Error('FaceSnap not found!');
+  }
+} */
 
 
 getAllBoard() {
   this.httpClient
   
-    .get<any[]>('https://sea-locker-backend-dev.herokuapp.com/api/v1/partner/60bf56b2ed1e480004a7a110')
+    .get<any[]>('https://sea-locker-backend-dev.herokuapp.com/api/v1/partner/60bf56b2ed1e480004a7a110' + partnerId)
     
     .subscribe(
       (response) => {
