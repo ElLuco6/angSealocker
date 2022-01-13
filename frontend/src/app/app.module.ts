@@ -8,6 +8,7 @@ import { RouterModule  } from '@angular/router';
 
  const appRoutes: Routes = [
   { path: 'partner/:id', component: AppComponent},
+  { path: '', component: AppComponent},
 ]; 
 
 @NgModule({

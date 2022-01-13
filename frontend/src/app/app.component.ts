@@ -20,6 +20,7 @@ import { ActivatedRoute } from '@angular/router'
 
 export class AppComponent implements OnInit {
   title = 'angSealocker';
+  //public data = new Board();
   public data : any;
   
   //public boardSubject = new Subject<Board[]>();
@@ -39,8 +40,10 @@ export class AppComponent implements OnInit {
   } */
 
 ngOnInit(){
+ // var partnerId = "60bf56b2ed1e480004a7a110";
+ 
 
-const partnerId = this.route.snapshot.params['id'];
+var partnerId = this.route.snapshot.params['id'];
 console.log(partnerId);
 //this.data = this.getPartnerById(partnerId);
   
@@ -65,10 +68,7 @@ console.log(partnerId);
       $(this).find(".voir_div").slideToggle();
      /*  $(this).find(".price").toggle(500,"swing"); */
     });
-    window.onload = function() {
-     
-      console.log('yo')
-    }
+   
     
     
 }
@@ -83,9 +83,10 @@ console.log(partnerId);
 
 
 getAllBoard() {
+  
   this.httpClient
   
-    .get<any[]>('https://sea-locker-backend-dev.herokuapp.com/api/v1/partner/60bf56b2ed1e480004a7a110' + partnerId)
+    .get<any[]>('https://sea-locker-backend-dev.herokuapp.com/api/v1/partner/60bf56b2ed1e480004a7a110')
     
     .subscribe(
       (response) => {
