@@ -167,6 +167,10 @@ box-sizing: border-box;
     height: 20vh;
     
 }
+/* .home_card:hover {
+    border:  solid #333333;
+    overflow: hidden;        
+} */
 #home_nav_row{
     color :white;
    

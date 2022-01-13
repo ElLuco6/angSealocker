@@ -35,8 +35,8 @@
         </div>
         <div *ngIf="data != undefined">
 
-            <h2 class="board_details_h2 fs-4 mb-0 text-uppercase fw-bold">{{data.partner.bio}}</h2>
-            <h3 class="gris Caveat mb-0">Board éco responsable en impression 3D</h3>
+            <h2 class="gris Caveat fs-4 mb-0 text-uppercase fw-bold">{{data.partner.bio}}</h2>
+            
     
         </div>
       
@@ -48,18 +48,18 @@
 
       <!--BOARD SECTION-->
       <div  *ngIf="data != undefined" class="container-fluid   d-flex flex-row justify-content-around mt-5" id="home_board_section">
-        <div class="row " id="home_display_boards">
+        <div class="row justify-content-center" id="home_display_boards">
           <!--Board dynamique-->
           <ng-container *ngFor="let board of data.boards">
-            <div  class="home_card col-2 art_board d-flex flex-column " style="width: 18rem;">
-              <div class="position-relative">
-                <img src="{{board.images[0]}}" alt="planche">
+            <div  class="home_card col-3 art_board d-flex flex-column  p-1 mb-3" style="width: 28rem;">
+              <div class="position-relative" style="background-color: #f6f6f6;;">
+                <img src="{{board.images[0]}}" alt="planche" style="height: 25vh; " class="rounded mt-1">
                 <div id="article-' + i + '" class="voir_div  position-absolute top-100 start-50 translate-middle">
-                  <p class="voir_p fw-bold px-1  text-center "> Réserver</p>
+                  <p class="voir_p fw-bold px-1 fs-5 text-center "> Réserver</p>
                 </div>
               </div>
-              <div>
-                <h5 class="board_details_h2 fs-4 fw-bold mt-3">{{board.size_ft}} \{{board.size_inch}} -
+              <div class="border-bottom">
+                <h5 class="board_details_h2 fs-4 fw-bold mt-3 text-uppercase">{{board.size_ft}} \{{board.size_inch}} -
                   {{board.shape}}</h5>
                 <p class="orange Caveat fs-3 fw-bold price">{{board.rental_price}}€/H</p>
               </div>

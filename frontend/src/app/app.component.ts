@@ -47,6 +47,7 @@ export class AppComponent implements OnInit, OnDestroy {
             console.log("SUBSCRIPTION");
             this.id_partner = params['id'];
             console.log(this.id_partner);
+           if(this.id_partner != undefined) this.getAllBoard(this.id_partner);
 
           });
      }
@@ -61,7 +62,7 @@ export class AppComponent implements OnInit, OnDestroy {
   //this.data = this.getPartnerById(partnerId);
       this.initSub();
       
-      this.getAllBoard(this.id_partner);
+      
      
 
       $(document).on('click', '#home_navbar', function(){
