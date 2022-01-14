@@ -10,7 +10,6 @@ import { ready } from 'jquery';
 import { ActivatedRoute } from '@angular/router';
 
 
-
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
@@ -58,6 +57,7 @@ export class AppComponent implements OnInit, OnDestroy {
 
   ngOnInit(){
     console.log("ON INIT");
+    this.setupNav();
    // var partnerId = "60bf56b2ed1e480004a7a110";
   //this.data = this.getPartnerById(partnerId);
       this.initSub();
@@ -73,7 +73,7 @@ export class AppComponent implements OnInit, OnDestroy {
       $(document).on('mouseleave', ".art_board", function () {
         $(this).find(".voir_div").slideToggle();
         /* $(this).find(".price").toggle(500,"swing"); */
-        
+        $(this).find('#spinner').toggle();
         
       });
     
@@ -113,8 +113,46 @@ export class AppComponent implements OnInit, OnDestroy {
           }
         );
 }
- 
 
+clickBoards(i: number){
+ // alert(i);
+  $("#overlay").fadeIn(500);;
+  
+
+}
+setupNav(){
+  $('#spinner').attr('style', 'display: none !important') ;
+  console.log('cbon');
+ 
+}
+test(){
+  
+}
+
+diplayNav(){
+  $(document).on('click', "#home_navbar", function () {
+    
+    
+    $("#.nav-link").toggle(500,"swing");
+    $('#home_nav_row').toggle(500,"swing")
+    //$("#oneBoard_overlay").fadeOut(500);
+   // $("#navbar").show();
+  });
+
+}
+
+closePopup(){
+  $(document).on('click', ".btnClose", function () {
+    
+    $("#overlay").fadeOut(500);
+    $("#oneBoard_overlay").fadeOut(500);
+    $("#navbar").show();
+  });
+
+ 
+}
+
+ 
 }
 
 
