@@ -34,8 +34,14 @@
         </div>
         <div *ngIf="data != undefined">
 
-            <h2 id="bio" class="gris Caveat fs-4 mb-0 mx-5 text-uppercase fw-bold">{{data.partner.bio}}</h2>
-            
+        
+           
+          <button (click)="checkDataLength(test)">test</button>
+            <div>
+              <app-readmore [isReadMore]="isReadMore">
+                <h2 id="bio" class="gris Caveat fs-4 mb-0 mx-5 text-uppercase fw-bold">{{test}}</h2>
+              </app-readmore>
+          </div>
     
         </div>
       
