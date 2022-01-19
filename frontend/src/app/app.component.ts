@@ -33,12 +33,6 @@ export class AppComponent implements OnInit, OnDestroy {
   private id_partner: string;
 
 
-  
-
-
-
-  
-
 
   constructor(private activatedRoute: ActivatedRoute,
     private httpClient: HttpClient) { }
@@ -61,20 +55,17 @@ export class AppComponent implements OnInit, OnDestroy {
   
   ngOnInit() {
     
-    //this.test()
-    
     console.log("ON INIT");
     
     this.setupNav();
-    // var partnerId = "60bf56b2ed1e480004a7a110";
-    //this.data = this.getPartnerById(partnerId);
+    
     this.initSub();
 
-    //console.log(this.data)
+    
     
 
     $(document).on('click', '#home_navbar', function () {
-      console.log('y');
+      
       $(this).find(".nav-link").toggle(500, "swing");
     });
 
@@ -94,6 +85,8 @@ export class AppComponent implements OnInit, OnDestroy {
      this.checkDataLength(this.test); 
     console.log(this.test);
   }
+
+
   checkDataLength(test: string) {
     if(this.test != undefined)console.log('string-length', test.length);
 
@@ -113,7 +106,7 @@ export class AppComponent implements OnInit, OnDestroy {
           console.log(response);
           this.data = response;
           this.test = this.data.partner.bio ;
-          console.log(this.test)
+         
          
         },
         (error) => {
@@ -124,14 +117,40 @@ export class AppComponent implements OnInit, OnDestroy {
 
   clickBoards(i: number) {
     // alert(i);
-    $("#overlay").fadeIn(500);;
+     // $( '.data_brand_model') ;
+     $(document).on('click', '.art_board', function () {
+      let brand_model = $(this).find('.data_brand_model')[0].innerHTML;
+      let rental_price = $(this).find('.price')[0].innerHTML;
+      let image = $(this).find('.data_image').attr('src');
+      
+
+      $("#popup_image").html('<img src="' + image + '" alt="board_img" height="300vh" class="rounded m-1" />');
+      $("#popup_brand_model").html('<h2 class="append_element board_details_h2 fs-4 fw-bold mt-3 text-uppercase fst-italic">'+brand_model + '</h2>');
+      $("#popup_board_price").html('<h2 class="append_element orange Caveat fs-3 fw-bold price">'+rental_price + '</h2>');
+     
+       
+   
+
+     });
+     $(document).on('click', ".btnClose", function () {
+      let brand_model = $(this).find('.data_brand_model')[0];
+      
+      $(".data_brand_model").html(brand_model);
+     
+      $("#overlay").fadeOut(500);
+      $('.append_element').remove();
+     
+      
+    });
+     
+ 
+    $("#overlay").fadeIn(500);
 
 
   }
   setupNav() {
     $('#spinner').attr('style', 'display: none !important');
-    console.log('cbon');
-
+   
   }
   
 
@@ -149,7 +168,7 @@ export class AppComponent implements OnInit, OnDestroy {
 
   closePopup() {
     $(document).on('click', ".btnClose", function () {
-
+      $('.append_element').remove();
       $("#overlay").fadeOut(500);
       $("#oneBoard_overlay").fadeOut(500);
       $("#navbar").show();

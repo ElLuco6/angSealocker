@@ -52,20 +52,28 @@
       <!-- POPUP A STYLISER -->
     <div id="overlay" class="overlay ">
       
-      <div id="popup" class="popup rounded-3 position-relative">
+      <div id="popup" class="popup rounded-3 position-relative" >
 
         <span id="btnClose" (click)="closePopup()" class="btnClose position-absolute top-0 end-0 "><i
           class="las la-times-circle gris fs-1"></i></span>
-          <div id="popup_header">
+          <div id="popup_header" >
             
 
-              <h1 id="popup_h1" class="mb-3 fw-bold display-3 mt-3 mb-3">Test cette planche en téléchargeant l'app Sealocker</h1>
-            
-              <div id="app" class="mt-5 ">
-                <img src="https://popup-sealocker.herokuapp.com/assets/imgs/app-store-apple.png"
-            class="img-fluid p-4 m-4 border mb-3 border-3 rounded-3 bg-dark" alt="apple-logo">
-          <img src="https://popup-sealocker.herokuapp.com/assets/imgs/app-store-google.png"
-            class="img-fluid  p-4 m-4 border mb-3 border-3 rounded-3 bg-dark" alt="google-logo">
+              <h1 id="popup_h1" class="mb-3 fw-bold display-5 mt-3 mb-3">Teste cette planche en téléchargeant l'app Sealocker</h1>
+              <article class="">
+                <div id="popup_image" style="background-color: #f6f6f6;"></div>
+              <h2 id="popup_brand_model"></h2>
+              <h2 id="popup_board_price"></h2>
+              </article>
+              
+
+
+              <div id="app" class="mt-2 ">
+                <a href="https://apps.apple.com/fr/app/sea-locker/id1550954820"><img src="https://popup-sealocker.herokuapp.com/assets/imgs/app-store-apple.png"
+                  class="img-fluid p-4 m-4 border mb-3 border-3 rounded-3 bg-dark data_image" alt="apple-logo"></a>
+                <a href="https://play.google.com/store/apps/details?id=com.sealocker&gl=FR"><img src="https://popup-sealocker.herokuapp.com/assets/imgs/app-store-google.png"
+                  class="img-fluid  p-4 m-4 border mb-3 border-3 rounded-3 bg-dark" alt="google-logo"></a>
+          
             </div>
           </div>
          
@@ -81,16 +89,16 @@
           
           <!--Board dynamique-->
           <ng-container *ngFor="let board of data.boards;let i = index" >
-            <div id="article-{{i}}" (click)="clickBoards(i)" class="home_card col-3 art_board d-flex flex-column  p-1 mb-3" style="width: 28rem;">
-              <div class="position-relative rounded-3" style="background-color: #f6f6f6;;">
-                <img src="{{board.images[0]}}" alt="planche" style="height: 25vh; " class="rounded mt-1">
+            <div id="article-{{i}}" (click)="clickBoards(i)" class="home_card col-4 art_board d-flex flex-column  p-1 mb-3" style="width: 25rem;">
+              <div class="position-relative rounded-3" style="background-color: #f6f6f6;">
+                <img src="{{board.images[0]}}" alt="planche" style="height: 35vh; " class="data_image rounded mt-1">
                 <div class="voir_div  position-absolute top-100 start-50 translate-middle">
                   <p class="voir_p fw-bold px-1 fs-5 text-center fst-italic"> Réserver</p>
                 </div>
               </div>
               <div class="border-bottom">
-                <h5 class="board_details_h2 fs-4 fw-bold mt-3 text-uppercase fst-italic">{{board.size_ft}} \{{board.size_inch}} -
-                  {{board.shape}}</h5>
+                <h5 class="board_details_h2 fs-4 fw-bold mt-3 text-uppercase fst-italic">{{board.size_ft}}'{{board.size_inch}} -
+                 <span class="data_brand_model">{{board.brand_model}}</span></h5>
                 <p class="orange Caveat fs-3 fw-bold price">{{board.rental_price}}€/H</p>
               </div>
             </div>
@@ -106,6 +114,9 @@
     </section>
 
   </main>
+
+
+
   <!--Footer-->
   <footer class="fixed-bottom rounded-top" id="home_footer">
     <section id="footerSection3" class="rounded-top text-center ">
@@ -116,15 +127,15 @@
           <p class="fst-italic fs-1 text-start mb-0 text-uppercase Caveat board_details_h2">Telecharge l'app</p>
           <p class="text-nowrap text-start"> <span
               class="fs-1 ms-2  fw-bold me-3 text-nowrap text-white">SEALOCKER</span><span id="SEALOCKER"
-              class=" fs-2 text-uppercase orange">pour testé une planche</span></p>
+              class=" fs-2 text-uppercase orange">pour tester une planche</span></p>
         </div>
 
         <div id="app3" class="d-flex me-5 mt-3 justify-content-around flex-lg-column">
 
-          <img src="https://popup-sealocker.herokuapp.com/assets/imgs/app-store-apple.png"
-            class="img-fluid p-2 border mb-3 border-3 rounded-3 bg-dark" alt="apple-logo">
-          <img src="https://popup-sealocker.herokuapp.com/assets/imgs/app-store-google.png"
-            class="img-fluid  p-2 border mb-3 border-3 rounded-3 bg-dark" alt="google-logo">
+          <a href="https://apps.apple.com/fr/app/sea-locker/id1550954820"><img src="https://popup-sealocker.herokuapp.com/assets/imgs/app-store-apple.png"
+            class="img-fluid p-2 border mb-3 border-3 rounded-3 bg-dark" alt="apple-logo"></a>
+          <a href="https://play.google.com/store/apps/details?id=com.sealocker&gl=FR"><img src="https://popup-sealocker.herokuapp.com/assets/imgs/app-store-google.png"
+            class="img-fluid  p-2 border mb-3 border-3 rounded-3 bg-dark" alt="google-logo"></a>
         </div>
       </div>
     </section>
