@@ -41,6 +41,12 @@ h3{
 .orange{
     color: #f18f3a;
 }
+.vert{
+    color:#13616d;
+}
+.rouge{
+    color:#712e1b;
+}
 
 .gris{
     color: #c7d5d6;
@@ -50,6 +56,9 @@ h3{
     height: 10vh;
     object-fit: contain;
     
+}
+.text_hide{
+    display: none;
 }
   
   .voir_p{
@@ -254,6 +263,9 @@ div.collapsed {
     font-size: 16pt;
     cursor: pointer;
     color: rgb(26, 26, 26);
+  }
+  #popup_h1{
+      background-color: #13616d;
   }
 
 /* MEDIA QUERRY */

@@ -122,11 +122,14 @@ export class AppComponent implements OnInit, OnDestroy {
       let brand_model = $(this).find('.data_brand_model')[0].innerHTML;
       let rental_price = $(this).find('.price')[0].innerHTML;
       let image = $(this).find('.data_image').attr('src');
-      
+      let board_info = $(this).find('.board_info')[0].innerHTML;
+     
+     
 
-      $("#popup_image").html('<img src="' + image + '" alt="board_img" height="300vh" class="rounded m-1" />');
-      $("#popup_brand_model").html('<h2 class="append_element board_details_h2 fs-4 fw-bold mt-3 text-uppercase fst-italic">'+brand_model + '</h2>');
-      $("#popup_board_price").html('<h2 class="append_element orange Caveat fs-3 fw-bold price">'+rental_price + '</h2>');
+      $("#popup_board_info").html('<h2 class="append_element Caveat orange fs-1 mt-3 text-uppercase fst-italic">'+board_info + '</h2>');
+      $("#popup_image").html('<img src="' + image + '" alt="board_img" height="300vh" object-fit="contain" class="rounded m-2 " />');
+      $("#popup_brand_model").html('<h2 class="append_element vert  fs-1 fw-bold mt-5 text-uppercase">'+brand_model + '</h2>');
+      $("#popup_board_price").html('<h2 class="append_element vert Caveat fs-1 fw-bolder price">'+rental_price + '</h2>');
      
        
    
