@@ -8,6 +8,8 @@ import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { library } from '@fortawesome/fontawesome-svg-core';
 import { faChevronRight, faChevronDown } from '@fortawesome/free-solid-svg-icons';
 import { ReadmoreComponent } from './readmore/readmore.component';
+import { CarouselComponent } from './carousel/carousel.component';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 /* library.add(faChevronRight);
 library.add(faChevronDown)
  */
@@ -20,13 +22,16 @@ library.add(faChevronDown)
 @NgModule({
   declarations: [
     AppComponent,
-    ReadmoreComponent
+    ReadmoreComponent,
+    CarouselComponent,
+     
   ],
   imports: [
     HttpClientModule,  
     BrowserModule,
     RouterModule.forRoot(appRoutes),
-    FontAwesomeModule
+    FontAwesomeModule,
+    NgbModule
 
   ],
   providers: [],

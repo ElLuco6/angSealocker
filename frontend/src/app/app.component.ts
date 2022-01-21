@@ -28,7 +28,7 @@ export class AppComponent implements OnInit, OnDestroy {
   public title = 'angSealocker';
 
   public data: any;
-  public test: string;
+  public bio: string;
   public subRoute: Subscription;
   private id_partner: string;
 
@@ -81,16 +81,17 @@ export class AppComponent implements OnInit, OnDestroy {
       $(this).find(".voir_div").slideToggle();
       /*  $(this).find(".price").toggle(500,"swing"); */
     });
-     
-     this.checkDataLength(this.test); 
-    console.log(this.test);
+    console.log('yo');
+    console.log(this.bio);
+     this.checkDataLength(this.bio); 
+     console.log(this.bio);
   }
 
 
-  checkDataLength(test: string) {
-    if(this.test != undefined)console.log('string-length', test.length);
+  checkDataLength(bio: string) {
+    if(this.bio != undefined)console.log('string-length', bio.length);
 
-    this.isReadMore = (test.length > 60);
+    this.isReadMore = (bio.length > 60);
   }
 
 
@@ -105,7 +106,7 @@ export class AppComponent implements OnInit, OnDestroy {
         (response) => {
           console.log(response);
           this.data = response;
-          this.test = this.data.partner.bio ;
+          this.bio = this.data.partner.bio ;
          
          
         },
@@ -126,10 +127,10 @@ export class AppComponent implements OnInit, OnDestroy {
      
      
 
-      $("#popup_board_info").html('<h2 class="append_element Caveat orange fs-1 mt-3 text-uppercase fst-italic">'+board_info + '</h2>');
-      $("#popup_image").html('<img src="' + image + '" alt="board_img" height="300vh" object-fit="contain" class="rounded m-2 " />');
-      $("#popup_brand_model").html('<h2 class="append_element vert  fs-1 fw-bold mt-5 text-uppercase">'+brand_model + '</h2>');
-      $("#popup_board_price").html('<h2 class="append_element vert Caveat fs-1 fw-bolder price">'+rental_price + '</h2>');
+      $("#popup_board_info").html('<h2 class="append_element Caveat orange fs-2 mt-3 text-uppercase fst-italic">'+board_info + '</h2>');
+      $("#popup_image").html('<img src="' + image + '" alt="board_img" style="height:90% ;object-fit:contain; width:100%" class="popup_img  rounded m-2 " />');
+      $("#popup_brand_model").html('<h2 class="append_element vert Spartan fw-bold fs-1 fw-bold mt-5 text-uppercase">'+brand_model + '</h2>');
+      $("#popup_board_price").html('<h2 class="append_element vert Caveat fs-2  price"><span class="Spartan fw-bolder">'+rental_price + '</span>/H</h2>');
      
        
    

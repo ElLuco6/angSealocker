@@ -36,10 +36,10 @@
 
         
            
-          <button (click)="checkDataLength(test)">test</button>
+          <button (click)="checkDataLength(bio)">bio</button>
             <div>
               <app-readmore [isReadMore]="isReadMore">
-                <h2 id="bio" class="gris Caveat fs-4 mb-0 mx-5 text-uppercase fw-bold">{{test}}</h2>
+                <h2 id="bio" class="gris Caveat fs-4 mb-0 mx-5 text-uppercase fw-bold">{{bio}}</h2>
               </app-readmore>
           </div>
     
@@ -52,36 +52,33 @@
       <!-- POPUP A STYLISER -->
     <div id="overlay" class="overlay ">
       
-      <div id="popup" class="popup rounded-3 position-relative" >
+      <div id="popup" class="popup rounded-3 position-relative overflow-auto" >
 
         <span id="btnClose" (click)="closePopup()" class="btnClose position-absolute top-0 end-0 "><i
           class="las la-times-circle gris display-1"></i></span>
-          <div class="d-flex" >
+          <div class="d-flex flex-column flex-md-row " >
             <div class="d-flex">
-              <img src="{{data.partner.logo}}" alt="brand_logo" id="home_brand_logo" class="m-4">
-              <div id="popup_image"class="d-flex align-items-center"  style="height:60vh;"></div>
+              <img src="{{data.partner.logo}}" alt="brand_logo" id="home_brand_logo" class=" position-absolute top-0 start-0 ">
+             
             </div>
+            <!---->
             
 
-              
+
+            <!---->
+            <div id="popup_image"class="d-flex align-items-center container-fluid justify-content-center"  style="height:70vh;"></div>              
               <article class="container-fluid d-flex justify-content-center flex-column">
                 
               <h1 id="popup_brand_model"></h1>
               <h2 id="popup_board_info"></h2>
-              <h2 class="gris mb-0 Caveat">je la teste !</h2><p  id="popup_board_price"></p>
+              <h2 class="gris fs-2 mb-0 Caveat">je la teste !</h2><p  id="popup_board_price"></p>
               <p class="text-uppercase d-flex justify-content-center flex-column fs-3  rouge">Disponible a l'essaie à <span class="fw-bold">{{data.partner.city}}</span></p>
-              <button href="#" id="popup_h1" class="mx-5 mb-3 text-center rounded-3 btn Caveat text-uppercase fst-italic text-white fs-3 mt-3 mb-3">Téléchargez l'app pour tester</button>
+              <div class="d-flex justify-content-center">
+                <button href="#" id="popup_h1" class="mx-5 mb-3 text-center rounded-3 btn Caveat text-uppercase fst-italic text-white fs-3 mt-3 mb-3">Téléchargez l'app pour tester</button>
+
+              </div>
               </article>
               
-
-
-              <!-- <div id="app" class="mt-2 ">
-                <a href="https://apps.apple.com/fr/app/sea-locker/id1550954820"><img src="https://popup-sealocker.herokuapp.com/assets/imgs/app-store-apple.png"
-                  class="img-fluid p-4 m-4 border mb-3 border-3 rounded-3 bg-dark data_image" alt="apple-logo"></a>
-                <a href="https://play.google.com/store/apps/details?id=com.sealocker&gl=FR"><img src="https://popup-sealocker.herokuapp.com/assets/imgs/app-store-google.png"
-                  class="img-fluid  p-4 m-4 border mb-3 border-3 rounded-3 bg-dark" alt="google-logo"></a>
-          
-            </div> -->
           </div>
          
 
@@ -89,6 +86,27 @@
           
       </div>
   </div>
+  <!-- <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
+    <div class="carousel-inner">
+      <div class="carousel-item active">
+        <img src="../assets/img/3.png" class="d-block w-100" alt="...">
+      </div>
+      <div class="carousel-item">
+        <img src="../assets/img/images.png" class="d-block w-100" alt="...">
+      </div>
+      <div class="carousel-item">
+        <img src="..." class="d-block w-100" alt="...">
+      </div>
+    </div>
+    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Previous</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Next</span>
+    </button>
+  </div> -->
 
       <!--BOARD SECTION-->
       <div  *ngIf="data != undefined" class="container-fluid   d-flex flex-row justify-content-around mt-5" id="home_board_section">
@@ -104,11 +122,12 @@
                 </div>
               </div>
               <div class="border-bottom">
-                <p class="text_hide board_info Caveat orange">{{board.size_ft}}'{{board.size_inch}}  {{board.width_decimal}} X {{board.width_inch}}   {{board.thickness_decimal}} X {{board.thickness_inch}}
-                 {{board.volume}} -L</p>
-                <h5 class="board_details_h2 fs-4 fw-bold mt-3 text-uppercase fst-italic">{{board.size_ft}}'{{board.size_inch}} -
-                 <span class="data_brand_model">{{board.brand_model}}</span></h5>
-                <p class="orange Caveat fs-3 fw-bold price">{{board.rental_price}}€/H</p>
+                <p class="text_hide board_info Caveat orange">{{board.size_ft}}'{{board.size_inch}} X {{board.width_decimal}} ' {{board.width_inch}} X {{board.thickness_decimal}} ' {{board.thickness_inch}}
+                 -{{board.volume}} L</p>
+                <h5 class="board_details_h2 data_brand_model fs-4 fw-bold mt-3 text-uppercase fst-italic">{{board.brand_model}} - {{board.size_ft}}'{{board.size_inch}}</h5>
+
+                <p class="orange Caveat fs-3 fw-bold "><span class="price">{{board.rental_price}}€</span>/H</p>
+
               </div>
             </div>
 
@@ -136,7 +155,7 @@
             </div> -->
           </ng-container>
 
-          
+          <app-carousel></app-carousel>  
 
 
         </div>
@@ -176,3 +195,4 @@
     </section>
   </footer>
 </body>
+
