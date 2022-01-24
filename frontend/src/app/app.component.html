@@ -82,7 +82,7 @@
           <div class="d-flex align-middle flex-column flex-md-row ">
             <div class="d-flex">
               <img src="{{data.partner.logo}}" alt="brand_logo" id="home_brand_logo"
-                class=" position-absolute top-0 start-0 m-3">
+                class="float-start position-absolute top-0 start-0 m-3 display-1">
 
             </div>
             <!--Carousel-->
@@ -92,7 +92,7 @@
 
 
 
-              <div id="carouselExampleControls" class="carousel slide position-relative mt-5" style="height: 60vh;" data-bs-ride="carousel">
+              <div id="carouselExampleControls" class="carousel slide position-relative mt-5 align-self-center"  data-bs-ride="carousel">
                 <div class="carousel-inner">
                   <div id="popup_image1" class="carousel-item active">
   
@@ -104,12 +104,12 @@
                 </div>
                 <button class="carousel-control-prev " type="button" data-bs-target="#carouselExampleControls"
                   data-bs-slide="prev">
-                  <span class="carousel-control-prev-icon bg-secondary position-absolute bottom-0 end-0 mx-5 p-3 mb-5" aria-hidden="true"></span>
+                  <span class="carousel-control-prev-icon  position-absolute bottom-0 end-0 mx-2 p-3 mb-5" aria-hidden="true"></span>
                   <span class="visually-hidden ">Previous</span>
                 </button>
                 <button class="carousel-control-next  p-3 mb-5" type="button" data-bs-target="#carouselExampleControls"
                   data-bs-slide="next">
-                  <span class="carousel-control-next-icon position-absolute bottom-0 start-0 mx-5 bg-secondary p-3" aria-hidden="true"></span>
+                  <span class="carousel-control-next-icon position-absolute bottom-0 start-0 mx-2 p-3" aria-hidden="true"></span>
                   <span class="visually-hidden">Next</span>
                 </button>
               </div>
@@ -174,7 +174,7 @@
                 </div>
               </div>
               <div class="border-bottom">
-                <p class="text_hide board_info Caveat orange">{{board.size_ft}}'{{board.size_inch}} X
+                <p *ngIf="board.size_ft  != undefined" class="text_hide board_info Caveat orange">{{board.size_ft}}'{{board.size_inch}} X
                   {{board.width_decimal}} ' {{board.width_inch}} X {{board.thickness_decimal}} '
                   {{board.thickness_inch}}
                   -{{board.volume}} L</p>

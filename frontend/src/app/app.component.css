@@ -235,32 +235,7 @@ div.collapsed {
 
 
 
-.overlaySpinner {
-    position: fixed;
-    left: 0px;
-    top: 0px;
-    background-color: rgba(0, 0, 0, 0.5);
-    width: 100%;
-    height: 100%;
-    z-index: 1;
-    display: none;
-    overflow: auto;
-  
-  }
-  
-  .popupSpinner {
-      
-    margin: 1% auto;
-    width: 70%;
-    background-color: #FFFFFF;
-    position: relative;
-    box-shadow: 0 15px 20px rgba(0, 0, 0, 0.3);
-    border-radius: 5px;
-    overflow: auto;
-    padding-bottom: 0;
-  
-  
-  }
+
 
 
 /*POPUP*/
@@ -280,7 +255,7 @@ div.collapsed {
   .popup {
       
     margin: 1% auto;
-    width: 70%;
+    width: 80%;
     background-color: #FFFFFF;
     position: relative;
     box-shadow: 0 15px 20px rgba(0, 0, 0, 0.3);
@@ -290,13 +265,40 @@ div.collapsed {
     height: 70vh;
   
   }
-.carousel-control-prev-icon{
-    color:orange;
-}
+  .carousel-control-prev-icon,
+  .carousel-control-next-icon {
+    height: 100px;
+    width: 100px;
+    outline: black;
+    background-size: 100%, 100%;
+    
+    
+    background-image: none;
+  }
+  
+  .carousel-control-next-icon:after
+  {
+    content: '>';
+    font-size: 70px;
+    color: #f18f3a;
+  }
+  #home_brand_logo{
+      height: 150px;
+      width: auto;
+  }
+  .carousel-control-prev-icon:after {
+    content: '<';
+    font-size: 70px;
+    color: #f18f3a;
+  }
+
+
   .popup_img , .popup_img2   {
     border-radius: 3%;
   }
   #carouselExampleControls{
+    height: 60vh;
+    width: 40vh;
       margin-left: 15vh;
   }
   .carousel-inner > .item > img {
@@ -335,6 +337,21 @@ div.collapsed {
 
 /* Tablette*/
 @media screen and (max-width: 1100px) {
+
+    #home_brand_logo{
+        height: 100px;
+        width: auto;
+    }
+
+    #carouselExampleControls{
+        margin-left: 5vh;
+        height: 40vh;
+        width: 30vh;
+
+    }
+    .popup_img{
+        height: 40vh;
+    }
  
     .fs-1{
         font-size: 2.5rem !important;
@@ -363,6 +380,15 @@ div.collapsed {
 
 @media screen and (max-width: 702px) {
 
+    #carouselExampleControls{
+        margin-left: 2vh;
+        height: 30vh;
+        width: 25vh;
+
+    }
+    .popup_img{
+        height: 30vh;
+    }
     
     #SEALOCKER {
         font-size: 13px;
@@ -373,8 +399,13 @@ div.collapsed {
 /*Ajuste main img*/
 @media screen and (max-width: 602px) {
 
+    #home_brand_logo{
+        height: 80px;
+        width: auto;
+    }
+
     .append_element{
-        margin: 0px !important;
+        margin: 10px !important;
     }
     
     #SEALOCKER{
@@ -387,13 +418,23 @@ div.collapsed {
     #footer_block img{
         width: 150px;
     }
+    #carouselExampleControls{
+        margin-left: 0vh;
+        height: 30vh;
+        width: 15vh;
+
+    }
 
 }
 
 /*PHONE*/
 @media screen and (max-width: 480px) {
 
-   
+    #home_brand_logo{
+        height: 60px;
+        width: auto;
+    }
+
     #SEALOCKER{
         font-size: 16px !important;
     }

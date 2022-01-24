@@ -134,7 +134,7 @@ export class AppComponent implements OnInit, OnDestroy {
      
      
 
-      $("#popup_board_info").html('<h2 class="append_element Caveat orange fs-2 mt-3 text-uppercase fst-italic">'+board_info + '</h2>');
+      if (board_info != undefined)   $("#popup_board_info").html('<h2 class="append_element Caveat orange fs-2 mt-3 text-uppercase fst-italic">'+board_info + '</h2>');console.log(board_info);
       $("#popup_image2").html('<img src="' + image2 + '" alt="board_img" class="popup_img   m-2 " />');
       $("#popup_image1").html('<img src="' + image + '" alt="board_img"  class="popup_img   m-2 " />');
      
