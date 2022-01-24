@@ -1,9 +1,9 @@
 import { Component, OnInit, OnDestroy, Input,ViewEncapsulation } from '@angular/core';
 import * as $ from 'jquery';
-//import {Board } from './model/Board.model';
+
 import { Subscription } from 'rxjs';
 import { HttpClientModule } from '@angular/common/http';
-//import { data} from '../../../backend/index.js';
+
 import { BoardService } from './service/BoardService';
 import { HttpClient } from '@angular/common/http';
 import { ready } from 'jquery';
@@ -22,6 +22,7 @@ import { faCoffee, faChevronRight, faChevronDown } from '@fortawesome/free-solid
 
 export class AppComponent implements OnInit, OnDestroy {
   public isReadMore: boolean = false;
+  public spinner: boolean  = true;
   faChevronDown = faChevronDown;
   faChevronRight = faChevronRight; 
   faCoffee = faCoffee;
@@ -57,7 +58,7 @@ export class AppComponent implements OnInit, OnDestroy {
     
     console.log("ON INIT");
     
-    this.setupNav();
+    
     
     this.initSub();
 
@@ -82,9 +83,13 @@ export class AppComponent implements OnInit, OnDestroy {
       /*  $(this).find(".price").toggle(500,"swing"); */
     });
     console.log('yo');
-    console.log(this.bio);
+    /* console.log(this.bio);
      this.checkDataLength(this.bio); 
-     console.log(this.bio);
+     console.log(this.bio); */
+    
+     console.log(this.spinner);
+     
+    
   }
 
 
@@ -107,7 +112,8 @@ export class AppComponent implements OnInit, OnDestroy {
           console.log(response);
           this.data = response;
           this.bio = this.data.partner.bio ;
-         
+         this.spinner = false;
+         console.log(this.spinner);
          
         },
         (error) => {
@@ -129,14 +135,14 @@ export class AppComponent implements OnInit, OnDestroy {
      
 
       $("#popup_board_info").html('<h2 class="append_element Caveat orange fs-2 mt-3 text-uppercase fst-italic">'+board_info + '</h2>');
-      $("#popup_image2").html('<img src="' + image2 + '" alt="board_img" style="height:90% ;object-fit:contain; width:100%" class="popup_img  rounded m-2 " />');
-      $("#popup_image1").html('<img src="' + image + '" alt="board_img" style="height:90% ;object-fit:contain; width:100%" class="popup_img  rounded m-2 " />');
+      $("#popup_image2").html('<img src="' + image2 + '" alt="board_img" class="popup_img   m-2 " />');
+      $("#popup_image1").html('<img src="' + image + '" alt="board_img"  class="popup_img   m-2 " />');
      
       $("#popup_brand_model").html('<h2 class="append_element vert Spartan fw-bold fs-1 fw-bold mt-5 text-uppercase">'+brand_model + '</h2>');
       $("#popup_board_price").html('<h2 class="append_element vert Caveat fs-2  price"><span class="Spartan fw-bolder">'+rental_price + '</span>/H</h2>');
      
        
-   
+   //style="height:90% ;object-fit:contain; width:100%"
 
      });
      $(document).on('click', ".btnClose", function () {
@@ -155,10 +161,7 @@ export class AppComponent implements OnInit, OnDestroy {
 
 
   }
-  setupNav() {
-    $('#spinner').attr('style', 'display: none !important');
-   
-  }
+  
   
 
   diplayNav() {

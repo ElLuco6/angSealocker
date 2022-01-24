@@ -1,5 +1,14 @@
 <body>
+  
+  
+
+
   <main class="d-flex">
+    
+    
+
+    
+
 
     <!--NAVBAR -->
     <nav class="fixed-left rounded-end" id="home_navbar">
@@ -13,6 +22,18 @@
       <img class="nav-link" src="assets/img/photo.png" alt="tuto app2">
       <img class="nav-link" src="assets/img/maplogo.png" alt="tuto app3">
     </nav>
+
+
+    <div *ngIf="spinner != false"  id="overlaySpinner" class=" ">
+        
+      <div  id="popupSpinner" class=" ">
+        <div class="d-flex fs-1">
+          <div class="spinner-border " role="status">
+            <span class="visually-hidden ">Loading...</span>
+          </div>
+        </div>
+      </div>
+    </div>
 
     <section id="home_brand_info " class="text-center ms-5 container-fluid overflow-auto">
       <!--BRAND INFO -->
@@ -48,6 +69,7 @@
 
       </ng-container>
 
+     
 
       <!-- POPUP A STYLISER -->
       <div id="overlay" class="overlay ">
@@ -56,51 +78,44 @@
 
           <span id="btnClose" (click)="closePopup()" class="btnClose position-absolute top-0 end-0 "><i
               class="las la-times-circle gris display-1"></i></span>
-          <!-- <app-carousel>
-            <h2>{{bio}}</h2>
-          </app-carousel> -->
-          <div class="d-flex flex-column flex-md-row ">
+         
+          <div class="d-flex align-middle flex-column flex-md-row ">
             <div class="d-flex">
               <img src="{{data.partner.logo}}" alt="brand_logo" id="home_brand_logo"
                 class=" position-absolute top-0 start-0 m-3">
 
             </div>
-            <!---->
+            <!--Carousel-->
 
-            <!-- <div class="carousel-inner">
-              <div *ngFor="let board of data.boards; let i=index" [ngClass]="(i === 0) ? 'active' : ''">
-                  <img src="{{board.images[0]}}" alt="img">
-                  <div class="container">
-                      <div class="carousel-caption">
-          
-                      </div>
+             
+           
+
+
+
+              <div id="carouselExampleControls" class="carousel slide position-relative mt-5" style="height: 60vh;" data-bs-ride="carousel">
+                <div class="carousel-inner">
+                  <div id="popup_image1" class="carousel-item active">
+  
                   </div>
-              </div>
-          </div> -->
-
-
-            <div id="carouselExampleControls" class="carousel slide " data-bs-ride="carousel">
-              <div class="carousel-inner">
-                <div id="popup_image1" class="carousel-item active">
-
+                  <div id="popup_image2" class="carousel-item">
+  
+                  </div>
+  
                 </div>
-                <div id="popup_image2" class="carousel-item">
-
-                </div>
-
+                <button class="carousel-control-prev " type="button" data-bs-target="#carouselExampleControls"
+                  data-bs-slide="prev">
+                  <span class="carousel-control-prev-icon bg-secondary position-absolute bottom-0 end-0 mx-5 p-3 mb-5" aria-hidden="true"></span>
+                  <span class="visually-hidden ">Previous</span>
+                </button>
+                <button class="carousel-control-next  p-3 mb-5" type="button" data-bs-target="#carouselExampleControls"
+                  data-bs-slide="next">
+                  <span class="carousel-control-next-icon position-absolute bottom-0 start-0 mx-5 bg-secondary p-3" aria-hidden="true"></span>
+                  <span class="visually-hidden">Next</span>
+                </button>
               </div>
-              <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls"
-                data-bs-slide="prev">
-                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                <span class="visually-hidden">Previous</span>
-              </button>
-              <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls"
-                data-bs-slide="next">
-                <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                <span class="visually-hidden">Next</span>
-              </button>
-            </div>
+  
 
+            
 
             <!---->
             <!-- <div id="popup_image" class="d-flex align-items-center container-fluid justify-content-center"
@@ -128,34 +143,16 @@
 
         </div>
       </div>
-      <!-- <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
-    <div class="carousel-inner">
-      <div class="carousel-item active">
-        <img src="../assets/img/3.png" class="d-block w-100" alt="...">
-      </div>
-      <div class="carousel-item">
-        <img src="../assets/img/images.png" class="d-block w-100" alt="...">
-      </div>
-      <div class="carousel-item">
-        <img src="..." class="d-block w-100" alt="...">
-      </div>
-    </div>
-    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
-      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-      <span class="visually-hidden">Previous</span>
-    </button>
-    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
-      <span class="carousel-control-next-icon" aria-hidden="true"></span>
-      <span class="visually-hidden">Next</span>
-    </button>
-  </div> -->
+     
 
       <!--BOARD SECTION-->
+      
       <div *ngIf="data != undefined" class="container-fluid   d-flex flex-row justify-content-around mt-5"
         id="home_board_section">
+        
         <div class="row justify-content-center" id="home_display_boards">
 
-
+          
 
 
           <!--Board dynamique-->
@@ -190,28 +187,6 @@
             </div>
 
 
-            <!-- <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
-              <div class="carousel-inner">
-                <div class="carousel-item active">
-                  <img src="{{board.images[0]}}" class="d-block w-100" alt="...">
-                </div>
-                <div class="carousel-item">
-                  <img src="{{board.images[1]}}" class="d-block w-100" alt="...">
-                </div>
-                <div class="carousel-item">
-                  <img src="{{board.images[2]}}" class="d-block w-100" alt="...">
-                </div>
-              </div>
-              <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
-                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                <span class="visually-hidden">Previous</span>
-              </button>
-              <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
-                <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                <span class="visually-hidden">Next</span>
-              </button>
-            </div> -->
-
             <div *ngFor="let board of data.boards.images">
               <div>
                 <img src="{{board.images}}" alt="planche" style="height: 35vh; " class="data_image rounded mt-1">
@@ -225,11 +200,12 @@
 
 
         </div>
-        <div id="spinner" class="d-flex d-none justify-content-center">
+       
+       <!--  <div *ngIf="spinner != false" class="pull-left readMore" id="spinner" class="d-flex fs-1 justify-content-center">
           <div class="spinner-border " role="status">
             <span class="visually-hidden ">Loading...</span>
           </div>
-        </div>
+        </div> -->
       </div>
     </section>
 

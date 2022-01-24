@@ -200,7 +200,7 @@ div.collapsed {
     font-size: 65px;
 }
 .home_card{
-    
+    cursor: pointer;
     margin-bottom: 0px;
 }
 .home_card img{
@@ -218,6 +218,7 @@ div.collapsed {
     background-color: #13616d;
 }
 #home_navbar{
+    cursor: pointer;
     background-color: #13616d;
 }
 #footer_block{
@@ -230,7 +231,36 @@ div.collapsed {
     height: 1px;
 }
 
-.DLspinner { display: none !important; }
+
+
+
+
+.overlaySpinner {
+    position: fixed;
+    left: 0px;
+    top: 0px;
+    background-color: rgba(0, 0, 0, 0.5);
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    display: none;
+    overflow: auto;
+  
+  }
+  
+  .popupSpinner {
+      
+    margin: 1% auto;
+    width: 70%;
+    background-color: #FFFFFF;
+    position: relative;
+    box-shadow: 0 15px 20px rgba(0, 0, 0, 0.3);
+    border-radius: 5px;
+    overflow: auto;
+    padding-bottom: 0;
+  
+  
+  }
 
 
 /*POPUP*/
@@ -257,11 +287,27 @@ div.collapsed {
     border-radius: 5px;
     overflow: auto;
     padding-bottom: 0;
+    height: 70vh;
   
-  
+  }
+.carousel-control-prev-icon{
+    color:orange;
+}
+  .popup_img , .popup_img2   {
+    border-radius: 3%;
   }
   #carouselExampleControls{
       margin-left: 15vh;
+  }
+  .carousel-inner > .item > img {
+    width:640px;
+    height:360px;
+  }.carousel {
+      object-fit: contain;
+    width:100%;
+    height: 100%;
+    background-size: cover;
+    
   }
   
 .btnClose {
