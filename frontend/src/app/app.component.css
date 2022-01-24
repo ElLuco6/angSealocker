@@ -260,6 +260,9 @@ div.collapsed {
   
   
   }
+  #carouselExampleControls{
+      margin-left: 15vh;
+  }
   
 .btnClose {
 
