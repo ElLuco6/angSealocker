@@ -26,7 +26,7 @@ export class AppComponent implements OnInit, OnDestroy {
   faChevronRight = faChevronRight; 
   faCoffee = faCoffee;
   public title = 'angSealocker';
-
+  public currentMsgToChild1 = 'aa';
   public data: any;
   public bio: string;
   public subRoute: Subscription;
@@ -123,12 +123,15 @@ export class AppComponent implements OnInit, OnDestroy {
       let brand_model = $(this).find('.data_brand_model')[0].innerHTML;
       let rental_price = $(this).find('.price')[0].innerHTML;
       let image = $(this).find('.data_image').attr('src');
+      let image2 = $(this).find('.data_image2').attr('src');
       let board_info = $(this).find('.board_info')[0].innerHTML;
      
      
 
       $("#popup_board_info").html('<h2 class="append_element Caveat orange fs-2 mt-3 text-uppercase fst-italic">'+board_info + '</h2>');
-      $("#popup_image").html('<img src="' + image + '" alt="board_img" style="height:90% ;object-fit:contain; width:100%" class="popup_img  rounded m-2 " />');
+      $("#popup_image1").html('<img src="' + image2 + '" alt="board_img" style="height:90% ;object-fit:contain; width:100%" class="popup_img  rounded m-2 " />');
+      $("#popup_image1").html('<img src="' + image + '" alt="board_img" style="height:90% ;object-fit:contain; width:100%" class="popup_img  rounded m-2 " />');
+     
       $("#popup_brand_model").html('<h2 class="append_element vert Spartan fw-bold fs-1 fw-bold mt-5 text-uppercase">'+brand_model + '</h2>');
       $("#popup_board_price").html('<h2 class="append_element vert Caveat fs-2  price"><span class="Spartan fw-bolder">'+rental_price + '</span>/H</h2>');
      
