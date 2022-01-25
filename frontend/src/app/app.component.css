@@ -54,15 +54,26 @@ h3{
 .gris{
     color: #c7d5d6;
 }
+main{
+    height: 80vh !important;
+}
+
+
 
 #brand_logo{
     height: 10vh;
     object-fit: contain;
     
 }
+
 .text_hide{
     display: none;
 }
+
+#home_brand-info{
+    height: 80vh;
+}
+
   
   .voir_p{
     background-color: #EFEFEF;
@@ -111,6 +122,27 @@ box-sizing: border-box;
     font-size: 25px;
     flex-basis: 100%;
   }
+
+
+  #Sealocker_button{
+      margin: auto;
+    width: 200px;
+    height: 50px;
+    box-shadow: inset 0 0 0 0 #02345b;
+    transition: ease-out 0.3s;
+    outline: none;
+    background-color: #13616d;
+    color:white;
+    text-decoration: none;
+    padding:15px;
+   display: none !important;
+border-radius: 20px ;
+    }
+    #Sealocker_button:hover{
+box-shadow: inset 200px 0 0 0 #02345b;
+cursor: pointer;
+color:#f18f3a;
+}
  
 
 /* BOARD DETAILS CSS */
@@ -189,6 +221,9 @@ div.collapsed {
     background-color: #c7d5d6;
     height: 20vh;
 }
+#app3{
+    flex-direction: column;
+}
 #app3 img{
     height: 7vh;
     border-radius: 50px;
@@ -265,6 +300,27 @@ div.collapsed {
     height: 70vh;
   
   }
+
+  
+
+
+
+  /*POPUP SPINNER*/
+  #overlaySpinner{
+      height: 100vh;
+      width: 100%;
+      background: linear-gradient(70deg, #f18f3a, #13616d);
+      animation: gradient 5s ease infinite;
+  }
+
+  .spinner-border{
+      height: 5rem;
+      width: 5rem;
+      color: #EFEFEF;
+  }
+
+
+  /**/
   .carousel-control-prev-icon,
   .carousel-control-next-icon {
     height: 100px;
@@ -298,7 +354,7 @@ div.collapsed {
   }
   #carouselExampleControls{
     height: 60vh;
-    width: 40vh;
+    width: 40vw;
       margin-left: 15vh;
   }
   .carousel-inner > .item > img {
@@ -306,7 +362,7 @@ div.collapsed {
     height:360px;
   }.carousel {
       object-fit: contain;
-    width:100%;
+    width:40vw;
     height: 100%;
     background-size: cover;
     
@@ -323,6 +379,8 @@ div.collapsed {
   }
   .popup_img{
       height: 60vh;
+      width: 20vw;
+      background-size: cover;
   }
   .fs-1{
       font-size: 4rem !important;
@@ -330,7 +388,9 @@ div.collapsed {
   .fs-2{
     font-size: 3rem !important;
 }
-
+#home_brand_info{
+    height: 80vh;
+}
 /* MEDIA QUERRY */
 
 
@@ -343,21 +403,31 @@ div.collapsed {
         width: auto;
     }
 
+    #app3{
+        flex-direction: row;
+        margin-right: 0px !important;
+    }
+
     #carouselExampleControls{
+        margin-top: 10vh!important;
         margin-left: 5vh;
         height: 40vh;
-        width: 30vh;
+        width: 30vw;
 
     }
     .popup_img{
         height: 40vh;
+        width: 30vw;
     }
  
-    .fs-1{
+    #telecharge_app_footer{
         font-size: 2.5rem !important;
     }
     #SEALOCKER{
-        width: 60%;
+        font-size: 2rem !important;
+    }
+    #test_planche_footer{
+        font-size: 1.5rem !important;
     }
    
     #footer_block{
@@ -380,18 +450,49 @@ div.collapsed {
 
 @media screen and (max-width: 702px) {
 
+    #column_brand_info{
+        flex-direction: column;
+    }
     #carouselExampleControls{
         margin-left: 2vh;
         height: 30vh;
         width: 25vh;
 
     }
+    .ms-5{
+        margin-left: 0 !important;
+    }
+    #home_brand_info{
+        height: 80vh !important;
+        margin-left: 0 !important;
+    }
+    nav{
+        position: static !important;
+        flex-direction: row !important;
+    }
+    #Sealocker_button{
+        display: block !important;
+    }
     .popup_img{
         height: 30vh;
+    }
+    .nav-link{
+        height: 26vh;
+        width: 100%;
     }
     
     #SEALOCKER {
         font-size: 13px;
+    }
+    #SEALOCKER{
+        font-size: 1.3rem !important;
+    }
+    #test_planche_footer{
+        font-size: 1rem !important;
+    }
+
+    #popup_board_model{
+      font-size: 3rem !important;
     }
    
 }
@@ -411,6 +512,7 @@ div.collapsed {
     #SEALOCKER{
         font-size: 20px;
     }
+    
 
     #home_navbar a{
         display: none;
