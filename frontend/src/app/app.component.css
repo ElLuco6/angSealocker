@@ -467,8 +467,7 @@ div.collapsed {
         margin-left: 0 !important;
     }
     nav{
-        position: static !important;
-        flex-direction: row !important;
+        display: none;
     }
     #Sealocker_button{
         display: block !important;
