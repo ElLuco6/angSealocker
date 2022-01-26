@@ -71,7 +71,7 @@ main{
 }
 
 #home_brand-info{
-    height: 80vh;
+    height: 90vh;
 }
 
   
@@ -198,18 +198,20 @@ div.collapsed {
 /* New Home page */
 #home_navbar{
     height: 80vh;
+    background-color: #13616d;
 }
 #home_navbar img {
     margin: 0px;
     height: 20vh;
+    width: 15vw;
 }
 .nav-link{
     padding: 0px !important;
     background-color: #13616d;
 }
-#home_board_section{
+/* #home_board_section{
  height: 30vh;
-}
+} */
 #home_footer{
     height: 20vh;
     margin-bottom: 0px;
@@ -252,10 +254,7 @@ div.collapsed {
    
     background-color: #13616d;
 }
-#home_navbar{
-    cursor: pointer;
-    background-color: #13616d;
-}
+
 #footer_block{
  display: flex;       
 }
@@ -289,16 +288,27 @@ div.collapsed {
   
   .popup {
       
-    margin: 1% auto;
-    width: 80%;
+    margin-left: 15% ;
+    width: 85vw;
     background-color: #FFFFFF;
     position: relative;
     box-shadow: 0 15px 20px rgba(0, 0, 0, 0.3);
     border-radius: 5px;
     overflow: auto;
     padding-bottom: 0;
-    height: 70vh;
+    height: 80vh;
   
+  }
+
+  #popup_first_section{
+      height: 20vh;
+  }
+  #carousel_section , #carouselExampleControls ,.popup_img{
+      height: 40vh;
+      width: 100vw;
+  }
+  #popup_more_info{
+      height: 20vh;
   }
 
   
@@ -355,7 +365,7 @@ div.collapsed {
   #carouselExampleControls{
     height: 60vh;
     width: 40vw;
-      margin-left: 15vh;
+      margin-left: 10vw;
   }
   .carousel-inner > .item > img {
     width:640px;
@@ -389,7 +399,8 @@ div.collapsed {
     font-size: 3rem !important;
 }
 #home_brand_info{
-    height: 80vh;
+    height: 100%;
+    width: 100%;
 }
 /* MEDIA QUERRY */
 
@@ -409,7 +420,7 @@ div.collapsed {
     }
 
     #carouselExampleControls{
-        margin-top: 10vh!important;
+       
         margin-left: 5vh;
         height: 40vh;
         width: 30vw;
@@ -467,7 +478,7 @@ div.collapsed {
         margin-left: 0 !important;
     }
     nav{
-        display: none;
+        height: 20vh;
     }
     #Sealocker_button{
         display: block !important;
@@ -476,7 +487,7 @@ div.collapsed {
         height: 30vh;
     }
     .nav-link{
-        height: 26vh;
+        height: 20vh;
         width: 100%;
     }
     
@@ -493,11 +504,49 @@ div.collapsed {
     #popup_board_model{
       font-size: 3rem !important;
     }
+
+    #popup_first_section{
+        height: 20vh;
+    }
+    #carousel_section , #carouselExampleControls ,.popup_img{
+        height: 30vh;
+        width: 100vw;
+    }
+    #popup_more_info{
+        height: 20vh;
+    }
    
 }
 
 /*Ajuste main img*/
 @media screen and (max-width: 602px) {
+
+    main{
+        flex-direction: column;
+        
+    }
+    #home_brand_info{
+        height: 70vh !important;
+        margin-left: 0 !important;
+    }
+
+    #home_navbar img{
+        height: 10vh;
+        width: 25vw;
+    }
+    #home_navbar{
+        height: 10vh;
+    }
+    nav{
+        display: flex;
+        flex-direction: row;
+        width: 100%;
+        height: 10vh;
+    }
+    .nav-link{
+        height: 100%;
+        width: 25vw;
+    }
 
     #home_brand_logo{
         height: 80px;
@@ -526,6 +575,23 @@ div.collapsed {
 
     }
 
+
+    .popup {
+      
+        margin-top: 10vh ;
+        margin-left: 0px;
+        width: 100vw;
+        background-color: #FFFFFF;
+        position: relative;
+        box-shadow: 0 15px 20px rgba(0, 0, 0, 0.3);
+        border-radius: 5px;
+        overflow: auto;
+        padding-bottom: 0;
+        height: 70vh;
+      
+      }
+    
+
 }
 
 /*PHONE*/
@@ -535,6 +601,10 @@ div.collapsed {
         height: 60px;
         width: auto;
     }
+    #home_board_section {
+        height: 70vh !important;
+        width: 100vw !important;
+    }
 
     #SEALOCKER{
         font-size: 16px !important;
@@ -542,4 +612,13 @@ div.collapsed {
     #home_title{
         font-size: 30px; 
      }
+     #popup_city{
+         display: none !important;
+     }
+     #popup_h1{
+         display: none !important;
+     }
+     #carousel_section , #carouselExampleControls ,.popup_img{
+        width: 60vw;
+    }
 }

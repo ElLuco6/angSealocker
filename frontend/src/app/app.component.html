@@ -1,27 +1,26 @@
-
 <body>
-<!--POPUP SPINNER-->
-<!--SPINNER-->
-<div *ngIf="spinner != false" id="overlaySpinner"  class="position-relative ">
+  <!--POPUP SPINNER-->
+  <!--SPINNER-->
+  <div *ngIf="spinner != false" id="overlaySpinner" class="position-relative ">
 
-  <div id="popupSpinner" class=" ">
-    <img class="d-flex flex-column position-absolute top-0 start-0 " src="assets/img/LOGO_sans_hallo.png" alt="logo"> 
-     <div class="d-flex flex-column position-absolute top-50 start-50 translate-middle-y">
-        
-      <div class="spinner-border " role="status">
-        
-        <span class="visually-hidden ">Loading...</span>
-      </div> 
-    </div> 
+    <div id="popupSpinner" class=" ">
+      <img class="d-flex flex-column position-absolute top-0 start-0 " src="assets/img/LOGO_sans_hallo.png" alt="logo">
+      <div class="d-flex flex-column position-absolute top-50 start-50 translate-middle-y">
+
+        <div class="spinner-border " role="status">
+
+          <span class="visually-hidden ">Loading...</span>
+        </div>
+      </div>
+    </div>
   </div>
-</div> 
 
-<div *ngIf="spinner != false" id="overlaySpinner" class="overlay ">
-
- 
+  <div *ngIf="spinner != false" id="overlaySpinner" class="overlay ">
 
 
-    <div  id="overlaySpinner" class=" ">
+
+
+    <div id="overlaySpinner" class=" ">
 
       <div id="popupSpinner" class=" ">
         <div class="d-flex fs-1">
@@ -32,20 +31,16 @@
       </div>
     </div>
 
-  
-</div>
+
+  </div>
 
 
 
   <main class="d-flex">
 
 
-
-
-
-
     <!--NAVBAR -->
-    <nav class="fixed-left rounded-end" id="home_navbar">
+    <nav class="fixed-sm-top  rounded-end" id="home_navbar">
 
 
       <!-- Flèche nav pour mobile -->
@@ -57,7 +52,7 @@
       <img class="nav-link" src="assets/img/maplogo.png" alt="tuto app3">
     </nav>
 
-    
+
 
     <section id="home_brand_info " class="text-center ms-5 container-fluid overflow-auto">
       <!--BRAND INFO -->
@@ -91,11 +86,12 @@
           </div>
 
         </div>
-        <button (click)="mobilePopup()"  id="Sealocker_button" class="d-flex mt-3 btn btn-primary align-item-center text-center flex-column fst-italic"
-         role="button" data-bs-toggle="button">
+        <!-- <button (click)="mobilePopup()" id="Sealocker_button"
+          class="d-flex mt-3 btn btn-primary align-item-center text-center flex-column fst-italic" role="button"
+          data-bs-toggle="button">
           Comment ça marche ?
 
-        </button>
+        </button> -->
 
       </ng-container>
 
@@ -109,63 +105,91 @@
           <span id="btnClose" (click)="closePopup()" class="btnClose position-absolute top-0 end-0 "><i
               class="las la-times-circle gris display-1"></i></span>
 
-          <div class="d-flex align-middle flex-column flex-md-row ">
-            <div class="d-flex">
-              <img src="{{data.partner.logo}}" alt="brand_logo" id="home_brand_logo"
-                class="float-start position-absolute top-0 start-0 m-3 display-1">
+              <div id="popup_first_section" class=" justify-content-center">
+                <img src="{{data.partner.logo}}" alt="brand_logo" id="home_brand_logo"
+                  class=" m-3 ">
+                <h1 id="popup_brand_model"></h1>
+              </div>
 
-            </div>
+          <div class="d-flex align-middle flex-column flex-md-row ">
+
+            
+
             <!--Carousel-->
 
 
-            <div id="carouselExampleControls" class="carousel slide position-relative mt-5 align-self-center"
-              data-bs-ride="carousel">
-              <div class="carousel-inner">
-                <div id="popup_image1" class="carousel-item active">
+            <section id="carousel_section" class="d-flex flex-row align-item-center">
+              <div id="carouselExampleControls" class="carousel slide position-relative  align-self-center"
+                data-bs-ride="carousel">
+
+                <div class="carousel-inner">
+                  <div id="popup_image1" class="carousel-item active">
+
+                  </div>
+                  <div id="popup_image2" class="carousel-item">
+
+                  </div>
 
                 </div>
-                <div id="popup_image2" class="carousel-item">
-
-                </div>
-
+                <button class="carousel-control-prev " type="button" data-bs-target="#carouselExampleControls"
+                  data-bs-slide="prev">
+                  <!-- <span class="carousel-control-prev-icon  position-absolute bottom-0 end-0 mx-2 p-3 mb-5"
+                    aria-hidden="true"></span>
+                  <span class="visually-hidden ">Previous</span> -->
+                </button>
+                <button class="carousel-control-next  p-3 mb-5" type="button" data-bs-target="#carouselExampleControls"
+                  data-bs-slide="next">
+                  <!-- <span class="carousel-control-next-icon position-absolute bottom-0 start-0 mx-2 p-3"
+                    aria-hidden="true"></span>
+                  <span class="visually-hidden">Next</span> -->
+                </button>
               </div>
-              <button class="carousel-control-prev " type="button" data-bs-target="#carouselExampleControls"
-                data-bs-slide="prev">
-                <span class="carousel-control-prev-icon  position-absolute bottom-0 end-0 mx-2 p-3 mb-5"
-                  aria-hidden="true"></span>
-                <span class="visually-hidden ">Previous</span>
-              </button>
-              <button class="carousel-control-next  p-3 mb-5" type="button" data-bs-target="#carouselExampleControls"
-                data-bs-slide="next">
-                <span class="carousel-control-next-icon position-absolute bottom-0 start-0 mx-2 p-3"
-                  aria-hidden="true"></span>
-                <span class="visually-hidden">Next</span>
-              </button>
-            </div>
 
+              <article class="container-fluid d-flex justify-content-center text-start flex-column">
+
+                <h2 class="board_details_h2 fw-bold">Marque <span id="popup_brand"></span></h2>
+
+                <h2 class="orange fs-2 mb-0 Caveat">je la teste !</h2>
+                <p id="popup_board_price"></p>
+                <button href="#" id="popup_h1"
+                class=" mb-3 text-center rounded-3 btn btn-primary Spartan text-uppercase fst-italic text-white fs-3 mt-3 mb-3">Téléchargez
+                l'app pour tester</button> 
+               <!--  <p class="text-uppercase d-flex justify-content-center flex-column fs-3  rouge">Disponible a l'essaie à
+                  <span class="fw-bold">{{data.partner.city}}</span></p> -->
+              </article>
+
+            </section>
 
 
 
             <!---->
 
-            <article class="container-fluid d-flex justify-content-center flex-column">
 
-              <h1 id="popup_brand_model"></h1>
-              <h2 id="popup_board_info"></h2>
-              <h2 class="gris fs-2 mb-0 Caveat">je la teste !</h2>
-              <p id="popup_board_price"></p>
-              <p class="text-uppercase d-flex justify-content-center flex-column fs-3  rouge">Disponible a l'essaie à
-                <span class="fw-bold">{{data.partner.city}}</span></p>
-              <div class="d-flex justify-content-center">
-                <button href="#" id="popup_h1"
-                  class="mx-5 mb-3 text-center rounded-3 btn btn-primary Spartan text-uppercase fst-italic text-white fs-3 mt-3 mb-3">Téléchargez
-                  l'app pour tester</button>
 
-              </div>
-            </article>
+
 
           </div>
 
+          <article  id="popup_more_info" class="text-start container-fluid  mt-4">
+            <div class="row">
+              <div class="col">
+                <h2 class="board_details_h2 fw-bold">Cotes<span id="popup_board_info"></span></h2>
+            <h2 class="board_details_h2 fw-bold">Dérives<span id="popup_derive"></span></h2>
+              </div>
+              <div class="col"><h2 class="board_details_h2 fw-bold">Description<p id="popup_description"></p> </h2>
+                <p id="popup_city" class="text-uppercase d-flex justify-content-center flex-column fs-3  rouge">Disponible a l'essaie à
+                  <span class="fw-bold">{{data.partner.city}}</span></p>
+              </div>
+            </div>
+            
+            
+           
+             
+            <!-- <div class="d-flex justify-content-center">
+              
+
+            </div>-->
+          </article>
 
 
 
@@ -175,7 +199,7 @@
 
 
       <!--POPUP Mobile-->
-      <div id="overlayMobile" class="overlay ">
+      <!--   <div id="overlayMobile" class="overlay ">
 
         <div id="popupMobile" class="popup rounded-3 position-relative overflow-auto">
 
@@ -189,10 +213,10 @@
       <img class="nav-link" src="assets/img/maplogo.png" alt="tuto app3">
 
         </div>
-      </div>
+      </div> -->
 
 
-      
+
 
 
       <!--BOARD SECTION-->
@@ -209,7 +233,7 @@
           <ng-container *ngFor="let board of data.boards;let i = index">
 
             <div id="article-{{i}}" (click)="clickBoards(i)"
-              class="home_card col-4 art_board d-flex flex-column  p-1 mb-3" style="width: 25rem;">
+              class="home_card col-4 art_board d-flex flex-column container-fluid  p-1 mb-3" style="width: 20rem;">
               <div class="position-relative rounded-3" style="background-color: #f6f6f6;">
 
 
@@ -234,6 +258,9 @@
                   <span *ngIf="board.volume != undefined"> -{{board.volume}} L </span></p>
                 <h5 class="board_details_h2 data_brand_model fs-4 fw-bold mt-3 text-uppercase fst-italic">
                   {{board.brand_model}} - {{board.size_ft}}'{{board.size_inch}}</h5>
+                <p class="text_hide data_brand">{{board.brand}}</p>
+                <p class="text_hide board_derive">{{board.fins}}</p>
+                <p class="text_hide board_description"><!-- {{board.description}} --> {{board.fins}}</p>
 
                 <p class="orange Caveat fs-3 fw-bold "><span class="price">{{board.rental_price}}€</span>/H</p>
 
@@ -270,10 +297,11 @@
       <div id="footer_block" class="justify-content-between">
 
         <div class="d-flex flex-column">
-          <p id="telecharge_app_footer" class="fst-italic fs-1 text-start mb-0 text-uppercase Caveat board_details_h2">Telecharge l'app</p>
+          <p id="telecharge_app_footer" class="fst-italic fs-1 text-start mb-0 text-uppercase Caveat board_details_h2">
+            Telecharge l'app</p>
           <p class="text-nowrap mb-0 text-start"> <span id="SEALOCKER"
-              class="fs-2 ms-2  fw-bold me-3 text-nowrap text-white">SEALOCKER</span><span 
-              id="test_planche_footer"  class=" fs-3 text-uppercase orange">pour tester une planche</span></p>
+              class="fs-2 ms-2  fw-bold me-3 text-nowrap text-white">SEALOCKER</span><span id="test_planche_footer"
+              class=" fs-3 text-uppercase orange">pour tester une planche</span></p>
         </div>
 
         <div id="app3" class="d-flex me-5 mt-2 justify-content-around ">

@@ -108,7 +108,7 @@ export class AppComponent implements OnInit, OnDestroy {
           this.data = response;
           this.bio = this.data.partner.bio ;
          this.spinner = false;
-         
+         console.log(this.data);
          
         },
         (error) => {
@@ -125,14 +125,19 @@ export class AppComponent implements OnInit, OnDestroy {
       let image = $(this).find('.data_image').attr('src');
       let image2 = $(this).find('.data_image2').attr('src');
       let board_info = $(this).find('.board_info')[0].innerHTML;
-     
+       let board_derive = $(this).find('.board_derive')[0].innerHTML;
+      let brand = $(this).find('.data_brand')[0].innerHTML;
+      let board_description = $(this).find('.board_description')[0].innerHTML; 
      
 
-      if (board_info != undefined)   $("#popup_board_info").html('<h2 class="append_element Caveat orange fs-2 mt-3 text-uppercase fst-italic">'+board_info + '</h2>');
+      if (board_info != undefined)   $("#popup_board_info").html('<h2 class="append_element Spartan vert fs-3 mt-3 text-uppercase fst-italic">'+board_info + '</h2>');
       $("#popup_image2").html('<img src="' + image2 + '" alt="board_img" class="popup_img   m-2 " />');
       $("#popup_image1").html('<img src="' + image + '" alt="board_img"  class="popup_img   m-2 " />');
+       $("#popup_brand").html('<h2 class="append_element Spartan vert fs-3 mt-3 text-uppercase fst-italic">'+brand + '</h2>');
+      $("#popup_derive").html('<h2 class="append_element Spartan vert fs-3 mt-3 text-uppercase fst-italic">'+board_derive + '</h2>');
+      $("#popup_description").html('<p class="append_element Spartan vert fs-3 mt-3 text-uppercase fst-italic">'+board_description + '</p>'); 
      
-      $("#popup_brand_model").html('<h2 class="append_element vert Spartan fw-bold fs-1 fw-bold mt-5 text-uppercase" id="popup_board_model">'+brand_model + '</h2>');
+      $("#popup_brand_model").html('<h2 class="append_element vert Spartan fw-bold fs-1 fw-bold  text-uppercase" id="popup_board_model">'+brand_model + '</h2>');
       $("#popup_board_price").html('<h2 class="append_element vert Caveat fs-2  price"><span class="Spartan fw-bolder">'+rental_price + '</span>/H</h2>');
      
        
