@@ -23,7 +23,7 @@
     font-family: Inter;
     src: url("../assets/fonts/static/Inter-Regular.ttf") format('ttf');
 } 
-
+ /*SET BASE*/
 h1{
     font-family: 'Spartan', sans-serif ;
     color: #02345b
@@ -50,6 +50,9 @@ h3{
 .rouge{
     color:#712e1b;
 }
+.bleu{
+    color: #02345b;
+} 
 
 .gris{
     color: #c7d5d6;
@@ -57,8 +60,16 @@ h3{
 main{
     height: 80vh !important;
 }
+.text_hide{
+    display: none;
+}
 
 
+/*Set principal container*/
+
+#home_brand-info{
+    height: 90vh;
+}
 
 #brand_logo{
     height: 10vh;
@@ -66,15 +77,10 @@ main{
     
 }
 
-.text_hide{
-    display: none;
-}
-
-#home_brand-info{
-    height: 90vh;
-}
-
   
+
+
+/*Div Réserver article*/
   .voir_p{
     background-color: #EFEFEF;
     margin-bottom: 0px;
@@ -116,51 +122,15 @@ box-sizing: border-box;
   display: none;
 }
 
-
+/*Footer*/
 
   #SEALOCKER {
     font-size: 25px;
     flex-basis: 100%;
   }
 
-
-  #Sealocker_button{
-      margin: auto;
-    width: 200px;
-    height: 50px;
-    box-shadow: inset 0 0 0 0 #02345b;
-    transition: ease-out 0.3s;
-    outline: none;
-    background-color: #13616d;
-    color:white;
-    text-decoration: none;
-    padding:15px;
-   display: none !important;
-border-radius: 20px ;
-    }
-    #Sealocker_button:hover{
-box-shadow: inset 200px 0 0 0 #02345b;
-cursor: pointer;
-color:#f18f3a;
-}
  
 
-/* BOARD DETAILS CSS */
-
-.board_details_p{
-    color: #13616d;
-}
-.board_details_h2{
-    color: #02345b;
-} 
-
-#board_details_btn{
-    background-color: #13616d;
-    font-size: 2em;
-}
-#board_details_brand_logo{
-    height: 200px;
-}
 
 /*READ MORE*/
 div.collapsed {
@@ -195,7 +165,9 @@ div.collapsed {
     float: left;
   }
 
-/* New Home page */
+
+
+/*NavBar*/
 #home_navbar{
     height: 80vh;
     background-color: #13616d;
@@ -209,17 +181,14 @@ div.collapsed {
     padding: 0px !important;
     background-color: #13616d;
 }
-/* #home_board_section{
- height: 30vh;
-} */
+
+/*Footer*/
 #home_footer{
     height: 20vh;
     margin-bottom: 0px;
 }
-#pointeur{
-    height: 50px;
-}
 #footerSection3{
+    border-top-right-radius: 20px !important;
     background-color: #c7d5d6;
     height: 20vh;
 }
@@ -230,12 +199,25 @@ div.collapsed {
     height: 7vh;
     border-radius: 50px;
 }
+
+#footer_block{
+    display: flex;       
+   }
+
+
+/*Header*/
+#pointeur{
+    height: 50px;
+}
+
 #home_brand_logo{
-    height: 80px;
+    height: 10vh;
 }
 #home_title{
     font-size: 65px;
 }
+
+/*Board Article*/
 .home_card{
     cursor: pointer;
     margin-bottom: 0px;
@@ -244,33 +226,6 @@ div.collapsed {
     height: 20vh;
     
 }
-/* .home_card:hover {
-    border:  solid #333333;
-    overflow: hidden;        
-} */
-#home_nav_row{
-    color :white;
-   
-   
-    background-color: #13616d;
-}
-
-#footer_block{
- display: flex;       
-}
-#test{
-    color: #13616d;
-    background-color: #13616d;
-    margin: 0px;
-    height: 1px;
-}
-
-
-
-
-
-
-
 
 /*POPUP*/
 .overlay {
@@ -303,12 +258,87 @@ div.collapsed {
   #popup_first_section{
       height: 20vh;
   }
-  #carousel_section , #carouselExampleControls ,.popup_img{
-      height: 40vh;
-      width: 100vw;
+    #carouselExampleControls ,.popup_img{
+      height: 50vh;
+      width: 40vw;
+     border-radius: 3%;
+     object-fit: cover;
+      
   }
+  #carouselExampleControls ,.popup_img{
+    max-width: 400px;
+  }
+  
   #popup_more_info{
       height: 20vh;
+  }
+/* 
+  .carousel-control-prev-icon,
+  .carousel-control-next-icon {
+    height: 100px;
+    width: 100px;
+    outline: black;
+    background-size: 100%, 100%;
+    
+    
+    background-image: none;
+  }
+  
+  .carousel-control-next-icon:after
+  {
+    content: '>';
+    font-size: 70px;
+    color: #f18f3a;
+  }
+  
+  .carousel-control-prev-icon:after {
+    content: '<';
+    font-size: 70px;
+    color: #f18f3a;
+  }
+ */
+
+  /* .popup_img , .popup_img2   {
+    border-radius: 3%;
+  } */
+
+  .popup_laptop_font  {
+      font-size: 2rem !important;
+  }
+  .carousel-inner{
+      border-radius: 5%;
+  }
+  
+  /* .carousel-inner > .item > img {
+    width:100%;
+    height:360px;
+  }.carousel {
+    object-fit: contain;
+    width:100%;
+    height: 100%;
+    background-size: cover;
+    
+  } */
+  
+.btnClose {
+
+    font-size: 16pt;
+    cursor: pointer;
+    color: rgb(26, 26, 26);
+  }
+  #popup_h1{
+      background-color: #13616d;
+     width: 40vh;
+     margin: auto;
+  }
+
+  #popup_more_info{
+      display: none;
+  }
+
+  #article_popup{
+      text-align: center !important;
+      width: 40vw;
   }
 
   
@@ -331,77 +361,27 @@ div.collapsed {
 
 
   /**/
-  .carousel-control-prev-icon,
-  .carousel-control-next-icon {
-    height: 100px;
-    width: 100px;
-    outline: black;
-    background-size: 100%, 100%;
-    
-    
-    background-image: none;
-  }
-  
-  .carousel-control-next-icon:after
-  {
-    content: '>';
-    font-size: 70px;
-    color: #f18f3a;
-  }
-  #home_brand_logo{
-      height: 150px;
-      width: auto;
-  }
-  .carousel-control-prev-icon:after {
-    content: '<';
-    font-size: 70px;
-    color: #f18f3a;
-  }
-
-
-  .popup_img , .popup_img2   {
-    border-radius: 3%;
-  }
-  #carouselExampleControls{
-    height: 60vh;
-    width: 40vw;
-      margin-left: 10vw;
-  }
-  .carousel-inner > .item > img {
-    width:640px;
-    height:360px;
-  }.carousel {
-      object-fit: contain;
-    width:40vw;
-    height: 100%;
-    background-size: cover;
-    
-  }
-  
-.btnClose {
-
-    font-size: 16pt;
-    cursor: pointer;
-    color: rgb(26, 26, 26);
-  }
-  #popup_h1{
-      background-color: #13616d;
-  }
-  .popup_img{
+ 
+ /*  .popup_img{
       height: 60vh;
       width: 20vw;
       background-size: cover;
-  }
-  .fs-1{
+  } */
+  /* .fs-1{
       font-size: 4rem !important;
   }
   .fs-2{
     font-size: 3rem !important;
-}
-#home_brand_info{
+} */
+/* #home_brand_info{
     height: 100%;
     width: 100%;
-}
+} */
+
+
+
+
+
 /* MEDIA QUERRY */
 
 
@@ -409,28 +389,12 @@ div.collapsed {
 /* Tablette*/
 @media screen and (max-width: 1100px) {
 
-    #home_brand_logo{
-        height: 100px;
-        width: auto;
-    }
-
+   
+    /*Footer*/
     #app3{
         flex-direction: row;
         margin-right: 0px !important;
     }
-
-    #carouselExampleControls{
-       
-        margin-left: 5vh;
-        height: 40vh;
-        width: 30vw;
-
-    }
-    .popup_img{
-        height: 40vh;
-        width: 30vw;
-    }
- 
     #telecharge_app_footer{
         font-size: 2.5rem !important;
     }
@@ -448,6 +412,26 @@ div.collapsed {
        #footer_block img{
            width: 200px;
        }
+
+       /*Carousel*/
+      #carouselExampleControls ,.popup_img{
+        
+        height: 40vh;
+        width: 35vw;
+    }
+    .popup_laptop{
+        display: none !important;
+    }
+    #popup_more_info{
+        display: block ;
+    }
+    #article_popup{
+        text-align: left !important;
+        width: 40vw;
+    }
+    
+ 
+   
    
      #home_title{
         font-size: 50px; 
@@ -455,21 +439,26 @@ div.collapsed {
      #popup_image{
         height: 40vh !important;
     }
+
+    /*nav*/
+
+    #home_navbar img {
+        margin: 0px;
+        height: 20vh;
+        width: 25vw;
+    }
 }
 
 /* fix footer text */
 
 @media screen and (max-width: 702px) {
 
+
+    /*General Fix*/
     #column_brand_info{
         flex-direction: column;
     }
-    #carouselExampleControls{
-        margin-left: 2vh;
-        height: 30vh;
-        width: 25vh;
-
-    }
+ 
     .ms-5{
         margin-left: 0 !important;
     }
@@ -477,23 +466,52 @@ div.collapsed {
         height: 80vh !important;
         margin-left: 0 !important;
     }
+
+    /*Navbar*/
+
+
     nav{
         height: 20vh;
-    }
-    #Sealocker_button{
-        display: block !important;
-    }
-    .popup_img{
-        height: 30vh;
     }
     .nav-link{
         height: 20vh;
         width: 100%;
     }
+
     
-    #SEALOCKER {
+    
+    /* #Sealocker_button{
+        display: block !important;
+    } */
+    /* .popup_img{
+        height: 30vh;
+    } */
+
+/* Popup*/
+
+
+#popup_board_model{
+    font-size: 3rem !important;
+  }
+
+  #popup_first_section{
+      height: 20vh;
+  }
+   #carouselExampleControls ,.popup_img{
+       margin-left: 5vh;
+      height: 40vh;
+      width: 35vw;
+  }
+ 
+  #popup_more_info{
+      height: 20vh;
+  }
+    
+    /*Footer*/
+    
+    /* #SEALOCKER {
         font-size: 13px;
-    }
+    } */
     #SEALOCKER{
         font-size: 1.3rem !important;
     }
@@ -501,26 +519,14 @@ div.collapsed {
         font-size: 1rem !important;
     }
 
-    #popup_board_model{
-      font-size: 3rem !important;
-    }
-
-    #popup_first_section{
-        height: 20vh;
-    }
-    #carousel_section , #carouselExampleControls ,.popup_img{
-        height: 30vh;
-        width: 100vw;
-    }
-    #popup_more_info{
-        height: 20vh;
-    }
+   
    
 }
 
 /*Ajuste main img*/
 @media screen and (max-width: 602px) {
 
+    /*General fix*/
     main{
         flex-direction: column;
         
@@ -529,7 +535,12 @@ div.collapsed {
         height: 70vh !important;
         margin-left: 0 !important;
     }
+    /*Nav*/
 
+    
+    #home_navbar a{
+        display: none;
+    }
     #home_navbar img{
         height: 10vh;
         width: 25vw;
@@ -548,31 +559,15 @@ div.collapsed {
         width: 25vw;
     }
 
-    #home_brand_logo{
+    /* #home_brand_logo{
         height: 80px;
         width: auto;
-    }
+    } */
 
-    .append_element{
-        margin: 10px !important;
-    }
-    
-    #SEALOCKER{
-        font-size: 20px;
-    }
-    
+    /*POpup*/
 
-    #home_navbar a{
-        display: none;
-    }
-    #footer_block img{
-        width: 150px;
-    }
-    #carouselExampleControls{
-        margin-left: 0vh;
-        height: 30vh;
-        width: 15vh;
-
+     #carouselExampleControls ,.popup_img{
+        width: 40vw;
     }
 
 
@@ -590,6 +585,22 @@ div.collapsed {
         height: 70vh;
       
       }
+
+    .append_element{
+        margin: 10px !important;
+    }
+    /*Footer*/
+    
+    #SEALOCKER{
+        font-size: 20px;
+    }
+    
+
+    #footer_block img{
+        width: 150px;
+    }
+   
+    
     
 
 }
@@ -597,6 +608,8 @@ div.collapsed {
 /*PHONE*/
 @media screen and (max-width: 480px) {
 
+
+    /*Popup*/
     #home_brand_logo{
         height: 60px;
         width: auto;
@@ -604,10 +617,6 @@ div.collapsed {
     #home_board_section {
         height: 70vh !important;
         width: 100vw !important;
-    }
-
-    #SEALOCKER{
-        font-size: 16px !important;
     }
     #home_title{
         font-size: 30px; 
@@ -618,7 +627,18 @@ div.collapsed {
      #popup_h1{
          display: none !important;
      }
-     #carousel_section , #carouselExampleControls ,.popup_img{
-        width: 60vw;
+      #carouselExampleControls ,.popup_img{
+        width: 40vw;
     }
+    #popup_rental_price {
+        font-size: 2.5rem !important;
+    }
+    #je_la_test{
+        font-size: 2rem !important;
+    }
+/*Footer*/
+    #SEALOCKER{
+        font-size: 16px !important;
+    }
+   
 }

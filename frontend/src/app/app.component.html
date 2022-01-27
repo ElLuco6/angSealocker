@@ -43,8 +43,7 @@
     <nav class="fixed-sm-top  rounded-end" id="home_navbar">
 
 
-      <!-- Flèche nav pour mobile -->
-      <!-- <p id="test">test</p> -->
+     
 
       <img class="nav-link active" src="assets/img/LOGO_sans_hallo.png" alt="logo">
       <img class="nav-link" src="assets/img/3.png" alt="tuto app1">
@@ -111,14 +110,14 @@
                 <h1 id="popup_brand_model"></h1>
               </div>
 
-          <div class="d-flex align-middle flex-column flex-md-row ">
+          <div class="d-flex justify-content-center p-3 align-middle flex-column flex-md-row ">
 
             
 
             <!--Carousel-->
 
 
-            <section id="carousel_section" class="d-flex flex-row align-item-center">
+            <section id="carousel_section" class=" d-flex flex-row align-item-center">
               <div id="carouselExampleControls" class="carousel slide position-relative  align-self-center"
                 data-bs-ride="carousel">
 
@@ -131,28 +130,32 @@
                   </div>
 
                 </div>
-                <button class="carousel-control-prev " type="button" data-bs-target="#carouselExampleControls"
+                <button class="carousel-control-prev  p-3 mb-5" type="button" data-bs-target="#carouselExampleControls"
                   data-bs-slide="prev">
-                  <!-- <span class="carousel-control-prev-icon  position-absolute bottom-0 end-0 mx-2 p-3 mb-5"
+                   <span class="carousel-control-prev-icon  position-absolute bottom-0 end-0 mx-2 p-3 "
                     aria-hidden="true"></span>
-                  <span class="visually-hidden ">Previous</span> -->
+                  <span class="visually-hidden ">Previous</span> 
                 </button>
-                <button class="carousel-control-next  p-3 mb-5" type="button" data-bs-target="#carouselExampleControls"
+                <button class=" carousel-control-next orange p-3 mb-5" type="button" data-bs-target="#carouselExampleControls"
                   data-bs-slide="next">
-                  <!-- <span class="carousel-control-next-icon position-absolute bottom-0 start-0 mx-2 p-3"
+                   <span class="carousel-control-next-icon  position-absolute bottom-0 start-0 mx-2 p-3"
                     aria-hidden="true"></span>
-                  <span class="visually-hidden">Next</span> -->
+                  <span class="visually-hidden">Next</span> 
                 </button>
               </div>
 
-              <article class="container-fluid d-flex justify-content-center text-start flex-column">
+              <article id="article_popup" class="container-fluid d-flex justify-content-center text-start flex-column">
 
-                <h2 class="board_details_h2 fw-bold">Marque <span id="popup_brand"></span></h2>
+                <h2 class="popup_laptop popup_laptop_font"> <span  id="popup_laptop_board_info"></span></h2>
+               
+                <!-- <h2 class="popup_laptop bleu fw-bold popup_laptop_font">Marque <span id="popup_brand"></span></h2> -->
 
-                <h2 class="orange fs-2 mb-0 Caveat">je la teste !</h2>
+                <h2 id="je_la_test" class="orange fs-2 mb-0 Caveat text-nowrap popup_laptop_font">je la teste !</h2>
                 <p id="popup_board_price"></p>
+                <p id="popup_city" class="popup_laptop popup_laptop_font text-uppercase d-flex justify-content-center flex-column fs-3  rouge">Disponible a l'essaie à
+                  <span class="fw-bold">{{data.partner.city}}</span></p>
                 <button href="#" id="popup_h1"
-                class=" mb-3 text-center rounded-3 btn btn-primary Spartan text-uppercase fst-italic text-white fs-3 mt-3 mb-3">Téléchargez
+                class="popup_laptop_font popup_laptop mb-3 text-center rounded-3 btn btn-primary Spartan text-uppercase fst-italic text-white fs-3 mt-3 mb-3">Téléchargez
                 l'app pour tester</button> 
                <!--  <p class="text-uppercase d-flex justify-content-center flex-column fs-3  rouge">Disponible a l'essaie à
                   <span class="fw-bold">{{data.partner.city}}</span></p> -->
@@ -173,10 +176,10 @@
           <article  id="popup_more_info" class="text-start container-fluid  mt-4">
             <div class="row">
               <div class="col">
-                <h2 class="board_details_h2 fw-bold">Cotes<span id="popup_board_info"></span></h2>
-            <h2 class="board_details_h2 fw-bold">Dérives<span id="popup_derive"></span></h2>
+                <h2 class="bleu fw-bold">Cotes<span id="popup_board_info"></span></h2>
+            <h2 class="bleu fw-bold">Dérives<span id="popup_derive"></span></h2>
               </div>
-              <div class="col"><h2 class="board_details_h2 fw-bold">Description<p id="popup_description"></p> </h2>
+              <div class="col"><!-- <h2 class="bleu fw-bold">Description<p id="popup_description"></p> </h2> -->
                 <p id="popup_city" class="text-uppercase d-flex justify-content-center flex-column fs-3  rouge">Disponible a l'essaie à
                   <span class="fw-bold">{{data.partner.city}}</span></p>
               </div>
@@ -233,7 +236,7 @@
           <ng-container *ngFor="let board of data.boards;let i = index">
 
             <div id="article-{{i}}" (click)="clickBoards(i)"
-              class="home_card col-4 art_board d-flex flex-column container-fluid  p-1 mb-3" style="width: 20rem;">
+              class="home_card col-4 art_board d-flex flex-column container-fluid  p-1 mb-3" style="width: 22rem;">
               <div class="position-relative rounded-3" style="background-color: #f6f6f6;">
 
 
@@ -256,7 +259,7 @@
                     *ngIf="board.thickness_decimal && board.thickness_inch != undefined">{{board.thickness_decimal}} '
                     {{board.thickness_inch}}</span>
                   <span *ngIf="board.volume != undefined"> -{{board.volume}} L </span></p>
-                <h5 class="board_details_h2 data_brand_model fs-4 fw-bold mt-3 text-uppercase fst-italic">
+                <h5 class="bleu data_brand_model fs-4 fw-bold mt-3 text-uppercase fst-italic">
                   {{board.brand_model}} - {{board.size_ft}}'{{board.size_inch}}</h5>
                 <p class="text_hide data_brand">{{board.brand}}</p>
                 <p class="text_hide board_derive">{{board.fins}}</p>
@@ -296,8 +299,8 @@
 
       <div id="footer_block" class="justify-content-between">
 
-        <div class="d-flex flex-column">
-          <p id="telecharge_app_footer" class="fst-italic fs-1 text-start mb-0 text-uppercase Caveat board_details_h2">
+        <div class="d-flex align-item-center p-3 flex-column">
+          <p id="telecharge_app_footer" class="fst-italic fs-1 text-start mb-0 text-uppercase Caveat bleu">
             Telecharge l'app</p>
           <p class="text-nowrap mb-0 text-start"> <span id="SEALOCKER"
               class="fs-2 ms-2  fw-bold me-3 text-nowrap text-white">SEALOCKER</span><span id="test_planche_footer"

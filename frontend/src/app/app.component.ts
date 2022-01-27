@@ -65,10 +65,10 @@ export class AppComponent implements OnInit, OnDestroy {
     
     
 
-    $(document).on('click', '#home_navbar', function () {
+   /*  $(document).on('click', '#home_navbar', function () {
       
       $(this).find(".nav-link").toggle(500, "swing");
-    });
+    }); */
 
     $(document).on('mouseleave', ".art_board", function () {
       $(this).find(".voir_div").slideToggle();
@@ -131,14 +131,17 @@ export class AppComponent implements OnInit, OnDestroy {
      
 
       if (board_info != undefined)   $("#popup_board_info").html('<h2 class="append_element Spartan vert fs-3 mt-3 text-uppercase fst-italic">'+board_info + '</h2>');
+      /*Popup Laptop*/
+      if (board_info != undefined)   $("#popup_laptop_board_info").html('<h2 class="popup_laptop_font append_element Spartan vert fs-3 mt-3 text-uppercase fst-italic">'+board_info + '</h2>');
+      /* */
       $("#popup_image2").html('<img src="' + image2 + '" alt="board_img" class="popup_img   m-2 " />');
       $("#popup_image1").html('<img src="' + image + '" alt="board_img"  class="popup_img   m-2 " />');
-       $("#popup_brand").html('<h2 class="append_element Spartan vert fs-3 mt-3 text-uppercase fst-italic">'+brand + '</h2>');
+       $("#popup_brand").html('<h2 class="append_element popup_laptop_font Spartan vert fs-3 mt-3 text-uppercase fst-italic">'+brand + '</h2>');
       $("#popup_derive").html('<h2 class="append_element Spartan vert fs-3 mt-3 text-uppercase fst-italic">'+board_derive + '</h2>');
       $("#popup_description").html('<p class="append_element Spartan vert fs-3 mt-3 text-uppercase fst-italic">'+board_description + '</p>'); 
      
       $("#popup_brand_model").html('<h2 class="append_element vert Spartan fw-bold fs-1 fw-bold  text-uppercase" id="popup_board_model">'+brand_model + '</h2>');
-      $("#popup_board_price").html('<h2 class="append_element vert Caveat fs-2  price"><span class="Spartan fw-bolder">'+rental_price + '</span>/H</h2>');
+      $("#popup_board_price").html('<h2 id="popup_rental_price" class="popup_laptop_font append_element vert Caveat fs-2  price"><span class="Spartan fw-bolder">'+rental_price + '</span>/H</h2>');
      
        
    
@@ -163,7 +166,7 @@ export class AppComponent implements OnInit, OnDestroy {
   
   
 
-  diplayNav() {
+ /*  diplayNav() {
     $(document).on('click', "#home_navbar", function () {
 
 
@@ -172,7 +175,7 @@ export class AppComponent implements OnInit, OnDestroy {
       
     });
 
-  }
+  } */
 
   closePopup() {
     $(document).on('click', ".btnClose", function () {
