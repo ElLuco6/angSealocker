@@ -59,6 +59,7 @@ h3{
 }
 main{
     height: 80vh !important;
+    margin-left: 15vw;
 }
 .text_hide{
     display: none;
@@ -82,7 +83,7 @@ main{
 
 /*Div Réserver article*/
   .voir_p{
-    background-color: #EFEFEF;
+    background-color: #13616d;
     margin-bottom: 0px;
    border:  solid 20px #13616d;
    border-bottom: solid 5px #13616d;
@@ -102,7 +103,7 @@ display: flex;
 flex-direction: column;
 min-width: 0;
 word-wrap: break-word;
-background-color: #fff;
+
 background-clip: border-box;
 border: 1px solid rgba(0,0,0,.125);
 border-radius: .25rem;
@@ -171,11 +172,26 @@ div.collapsed {
 #home_navbar{
     height: 80vh;
     background-color: #13616d;
+    position: fixed;
+   
+    
+    bottom: 0;
+    left: 0;
+    z-index: 100;
+    top: 0;
+  
+}
+
+nav{
+    height: 20vh;
+    width: 15vw;
 }
 #home_navbar img {
     margin: 0px;
     height: 20vh;
     width: 15vw;
+     max-height: 250px;
+    max-width: 250px; 
 }
 .nav-link{
     padding: 0px !important;
@@ -201,7 +217,8 @@ div.collapsed {
 }
 
 #footer_block{
-    display: flex;       
+    display: flex;   
+    padding: 20px;    
    }
 
 
@@ -225,6 +242,7 @@ div.collapsed {
 .home_card img{
     height: 20vh;
     
+    
 }
 
 /*POPUP*/
@@ -232,7 +250,7 @@ div.collapsed {
     position: fixed;
     left: 0px;
     top: 0px;
-    background-color: rgba(0, 0, 0, 0.5);
+    
     width: 100%;
     height: 100%;
     z-index: 1;
@@ -262,7 +280,7 @@ div.collapsed {
       height: 50vh;
       width: 40vw;
      border-radius: 3%;
-     object-fit: cover;
+     object-fit: contain;
       
   }
   #carouselExampleControls ,.popup_img{
@@ -351,6 +369,7 @@ div.collapsed {
       width: 100%;
       background: linear-gradient(70deg, #f18f3a, #13616d);
       animation: gradient 5s ease infinite;
+      z-index: 5000;
   }
 
   .spinner-border{
@@ -373,10 +392,15 @@ div.collapsed {
   .fs-2{
     font-size: 3rem !important;
 } */
-/* #home_brand_info{
+ #home_brand_info{
+     margin-top: 10vh;
     height: 100%;
     width: 100%;
-} */
+} 
+.display_none_pc{
+    display: none;
+}
+
 
 
 
@@ -389,14 +413,17 @@ div.collapsed {
 /* Tablette*/
 @media screen and (max-width: 1100px) {
 
-   
+    .display_none_pc{
+        display: block;
+    }
+
     /*Footer*/
     #app3{
         flex-direction: row;
         margin-right: 0px !important;
     }
     #telecharge_app_footer{
-        font-size: 2.5rem !important;
+        font-size: 2rem !important;
     }
     #SEALOCKER{
         font-size: 2rem !important;
@@ -406,12 +433,15 @@ div.collapsed {
     }
    
     #footer_block{
-        display: block;   
+        display: block; 
+        padding: 0px;  
        
        }
        #footer_block img{
            width: 200px;
        }
+
+       
 
        /*Carousel*/
       #carouselExampleControls ,.popup_img{
@@ -440,13 +470,51 @@ div.collapsed {
         height: 40vh !important;
     }
 
-    /*nav*/
+    /*Popup*/
+    .popup {
+      
+        margin-top: 0vh ;
+        margin-left: 25vh;
+        width: 75vw;
+        background-color: #FFFFFF;
+        position: relative;
+        box-shadow: 0 15px 20px rgba(0, 0, 0, 0.3);
+        border-radius: 5px;
+        overflow: auto;
+        padding-bottom: 0;
+        height: 80vh;
+      
+      }
 
+    /*nav*/
+    main{
+        margin-left: 25vw !important;
+    }
+    nav{
+       
+        width: 25vw;
+    }
+    
     #home_navbar img {
         margin: 0px;
         height: 20vh;
         width: 25vw;
     }
+    /*Popup*/
+    .popup {
+      
+        margin-top: 0vh ;
+        margin-left: 25vw;
+        width: 75vw;
+        background-color: #FFFFFF;
+        position: relative;
+        box-shadow: 0 15px 20px rgba(0, 0, 0, 0.3);
+        border-radius: 5px;
+        overflow: auto;
+        padding-bottom: 0;
+        height: 80vh;
+      
+      }
 }
 
 /* fix footer text */
@@ -464,7 +532,11 @@ div.collapsed {
     }
     #home_brand_info{
         height: 80vh !important;
-        margin-left: 0 !important;
+        margin-left: 0vw !important;
+       
+    }
+    main{
+        margin-left: 20vw !important;
     }
 
     /*Navbar*/
@@ -491,7 +563,7 @@ div.collapsed {
 
 
 #popup_board_model{
-    font-size: 3rem !important;
+    font-size: 2rem !important;
   }
 
   #popup_first_section{
@@ -501,6 +573,7 @@ div.collapsed {
        margin-left: 5vh;
       height: 40vh;
       width: 35vw;
+      object-fit: cover !important ;
   }
  
   #popup_more_info{
@@ -529,10 +602,14 @@ div.collapsed {
     /*General fix*/
     main{
         flex-direction: column;
-        
+        margin-top: 10vh  !important;
+         margin-left: 0vw !important;
+         height: 70vh !important;
+    
     }
     #home_brand_info{
-        height: 70vh !important;
+       
+       
         margin-left: 0 !important;
     }
     /*Nav*/
@@ -553,6 +630,14 @@ div.collapsed {
         flex-direction: row;
         width: 100%;
         height: 10vh;
+        border-bottom-left-radius:20px ;
+        border-bottom-right-radius:20px ;
+    }
+    #nav_img1{
+        border-bottom-left-radius:20px ;
+    }
+    #nav_img4{
+        border-bottom-right-radius:20px ;
     }
     .nav-link{
         height: 100%;
@@ -590,15 +675,25 @@ div.collapsed {
         margin: 10px !important;
     }
     /*Footer*/
+
+    #footerSection3{
+        border-top-left-radius: 20px;
+    }
     
     #SEALOCKER{
         font-size: 20px;
     }
+    #footer_text{
+        padding: 0!important;
+    }
+
+    #telecharge_app_footer{
+        line-height: 4vh !important;
+        font-size: 1.5rem !important;
+    }
     
 
-    #footer_block img{
-        width: 150px;
-    }
+  
    
     
     
@@ -607,8 +702,7 @@ div.collapsed {
 
 /*PHONE*/
 @media screen and (max-width: 480px) {
-
-
+    
     /*Popup*/
     #home_brand_logo{
         height: 60px;
@@ -628,6 +722,7 @@ div.collapsed {
          display: none !important;
      }
       #carouselExampleControls ,.popup_img{
+         
         width: 40vw;
     }
     #popup_rental_price {
@@ -637,8 +732,17 @@ div.collapsed {
         font-size: 2rem !important;
     }
 /*Footer*/
+    
     #SEALOCKER{
         font-size: 16px !important;
+    }
+    #test_planche_footer{
+        font-size: 10px!important;
+    }
+
+    #footer_block img{
+        width: 45vw;
+        height: auto;
     }
    
 }
